@@ -1,13 +1,15 @@
 import { useId } from 'react'
 
 import { Container } from '@/components/Container'
+import Image from 'next/image'
+import ceoImage from '@/images/company/ceo.png'
 
 const histories = [
   {
     name: '2023 June (6/30)',
     description:
       `AICiTi program version 7.7 출시`,
-    icon: DeviceArrowIcon,
+      icon: DeviceClockIcon,
   },
   {
     name: '2023 April (4/25)',
@@ -22,7 +24,7 @@ const histories = [
     description:
       `자연 두부 위치에서 촬영된 엑스레이(X-ray) 이미지를 이용한 기계학습 기반 치아 교정 진단을 위한 
       두부계측 파라미터 도출방법 – 국내 출원 완료`,
-    icon: DeviceArrowIcon,
+      icon: DeviceLockIcon,
   },
   {
     name: '2022 September (9/8)',
@@ -36,20 +38,20 @@ const histories = [
     description:
       `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계 학습 기반 치아교정 진단을 위한 
       두부 계측 파라미터 도출방법 – PCT 출원 완료`,
-    icon: DeviceClockIcon,
+      icon: DeviceLockIcon,
   },
   {
     name: '2022 March (3/5)',
     description:
       `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계  학습 기반  치아교정 진단을 위한 
       두부 계측 파라미터 도출방법 – 국내 특허 등록 완료`,
-    icon: DeviceListIcon,
+      icon: DeviceLockIcon,
   },
   {
     name: '2021 September (9/10)',
     description:
       'AICiTi program version 4.1 출시',
-    icon: DeviceLockIcon,
+      icon: DeviceClockIcon,
   },
   {
     name: '2021 April (4/5)',
@@ -227,34 +229,44 @@ export function AboutCompany() {
 
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
         >
           <li
             key='name'
             className="rounded-2xl border-left border-gray-200 p-8"
           >
-            <h3 className="mt-6 font-semibold text-gray-900">
-              CEO: Ahn Jang-hoon
+            <Image
+              className="h-auto"
+              src={ceoImage}
+              alt={""}
+            />
+            <h3 className="mt-6 font-semibold text-gray-800 text-center">
+              Ahn Jang-hoon, CEO
             </h3>
+          </li>
+          <li
+            key='name'
+            className="rounded-2xl border-left border-gray-200 p-8"
+          >
             <p className="mt-2 text-gray-700">
-              Hello,
+              Hello,<br />
               This is Jang Hoon Ahn, the CEO of AInsightCorporation.
               I am delighted to have the opportunity to introduce our company to you.
-              Our company provides dental and medical software to clinicians. 
+              Our company provides dental and medical software to clinicians. <br />
               In particular, we offer a program that automatically analyzes two-dimensional x-ray, three-dimensional CBCT images,
-              and intraoral scan data that orthodontists and dental practitioners commonly take when treating orthodontic patients.
+              and intraoral scan data that orthodontists and dental practitioners commonly take when treating orthodontic patients.<br />
               Manually analyzing two-dimensional cephalograms, three-dimensional CBCT images, or intraoral scan data requires
-              a significant amount of time and effort.
+              a significant amount of time and effort.<br />
               Therefore, by utilizing artificial intelligence-based programs, we can automatically analyze these data,
               enabling efficient diagnosis and treatment planning for orthodontic patients in a short period of time
               We are also developing an automatic teeth alignment program that considers roots and skeletal structures,
-              which can be used for orthodontic treatment simulations or the production of clear aligners.
-              Additionally, we plan to provide automated three-dimensional simulation programs and surgical guides for orthognathic surgery.
+              which can be used for orthodontic treatment simulations or the production of clear aligners.<br />
+              Additionally, we plan to provide automated three-dimensional simulation programs and surgical guides for orthognathic surgery.<br />
               Furthermore, we are also planning the development of technology for automated diagnosis for implant surgery. Voice charting is another
               item in our AI software lineup which we believe could be helpful for general doctors, not only for dentists.
               As a dentist and orthodontic specialist myself, I understand the challenges and hard work that you face in clinical practice.
-              At our company, we continuously develop excellent dental and medical software to alleviate your hard work even just a little.
-              I sincerely wish you and your families good luck and good health.
+              At our company, we continuously develop excellent dental and medical software to alleviate your hard work even just a little.<br />
+              I sincerely wish you and your families good luck and good health.<br />
               Thank you
             </p>
           </li>
