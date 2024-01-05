@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import clsx from 'clsx'
+import clsx, { ClassValue } from 'clsx'
 
 const baseStyles = {
   solid:
@@ -46,7 +46,7 @@ export function Button<
 
   className = clsx(
     baseStyles[variant],
-    variantStyles[variant][color],
+    variantStyles[variant][color] as ClassValue,
     className,
   )
 
