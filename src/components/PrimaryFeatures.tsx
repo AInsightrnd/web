@@ -26,6 +26,8 @@ import {
   TransistorLogo,
   TupleLogo,
 } from '@/components/StockLogos'
+import Image from 'next/image'
+import aicitiImage from '@/images/product/product-main.png'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -37,23 +39,28 @@ interface CustomAnimationProps {
 
 const features = [
   {
-    name: 'Invite friends for better returns',
-    description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+    name: 'AICiTi Program',
+    description: `AI model program (Intraoral Scan의 치아모형 자동분석),
+      AI merging program (CBCT영상 + Intraoral scan + Face scan 자동병합),
+      AI setup program (Root를 포함한 전체치아를 자동배열한 셋업결과를 이용. 투명교정 장치를 제작할 수 있는 프로그램),
+      Virtual sugery simulaltion program (가상 양악수술 시뮬레이션 프로그램),
+      Surgical guide printing program (Virtual sugery simulaltion program을
+          통해 확정된 양악수술을 위한 surgical guide제공),
+      2차원 X-ray 자동분석, Teeth analysis`,
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: 'Under development',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Invest what you want',
+    name: 'TBD',
     description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -448,7 +455,15 @@ function FeaturesDesktop() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <CircleBackground color="#13B5C8" className="animate-spin-slower" />
         </div>
-        <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
+        <div className="z-10 mx-auto w-[30rem] justify-center">
+          <Image
+            className="w-auto"
+            src={aicitiImage}
+            alt={""}
+            priority={true}
+          />
+        </div>
+        {/* <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <Tab.Panels as={Fragment}>
             <AnimatePresence
               initial={false}
@@ -470,7 +485,7 @@ function FeaturesDesktop() {
               )}
             </AnimatePresence>
           </Tab.Panels>
-        </PhoneFrame>
+        </PhoneFrame> */}
       </div>
     </Tab.Group>
   )
@@ -573,25 +588,28 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      className="bg-gray-900 py-20 sm:py-32 justify-center"
     >
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+        <div className="mx-auto max-w-none lg:mx-0">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+            Every feature you need to focus on patients. Try it for yourself.
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+            Our program automatically detects landmarks and analyzes dental parameters 
+            extracted from the landmarks to output necessary for orthodontic diagnosis parameters 
+            using deep learning models on CBCT images for dentists and plastic surgeons especially for orthodontists,
+            and displays the result landmarks and diagnostic parameters 
+            as auxiliary overlayed drawings on top of the original image to efficiently visualize the necessary info for the patient. 
+            Each landmark can be also modified manually one by one to generate human extracted parameters 
+            as the counterpart for the AI generated ones for error corrections, comparison or any other purposes.
           </p>
         </div>
       </Container>
-      <div className="mt-16 md:hidden">
+      {/* <div className="mt-16 md:hidden">
         <FeaturesMobile />
-      </div>
-      <Container className="hidden md:mt-20 md:block">
+      </div> */}
+      <Container className="md:mt-20 md:block">
         <FeaturesDesktop />
       </Container>
     </section>

@@ -3,36 +3,36 @@ import { Container } from '@/components/Container'
 const faqs = [
   [
     {
-      question: 'How do I know the tips are good?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
     {
-      question: 'Isn’t this insider trading?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
     {
-      question: 'But isn’t insider trading illegal?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
   ],
   [
     {
-      question: 'Do the people giving you tips realize what they are doing?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
     {
-      question: 'Where is Pocket based?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'Let’s just say it’s not somewhere where the SEC is going to find us.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
     {
-      question: 'Is there any age limit to trading on Pocket?',
+      question: 'The standard Lorem Ipsum passag?',
       answer:
-        'For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.',
+        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
   ],
   [

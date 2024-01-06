@@ -6,6 +6,7 @@ import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Reviews } from '@/components/Reviews'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { AboutCompany } from '../../components/AboutCompany'
+import { Awarded } from '../../components/Awarded'
 
 export default function Home() {
   return (
@@ -13,8 +14,10 @@ export default function Home() {
       <Hero />
       <CallToAction />
       <AboutCompany />
+      <Awarded />
       <SecondaryFeatures />
       <PrimaryFeatures />
+
       <Reviews />
       <Pricing />
       <Faqs />

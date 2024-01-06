@@ -4,41 +4,29 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Video',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
-    icon: DeviceArrowIcon,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      icon: DeviceClockIcon,
   },
   {
-    name: 'Build a balanced portfolio',
+    name: 'Treatise',
     description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
+    name: 'User-guide',
     description:
-      'Get insider tips on big stock moves and act on them within seconds.',
-    icon: DeviceClockIcon,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      icon: DeviceListIcon,
   },
   {
-    name: 'Profit from your network',
+    name: 'CBCT',
     description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
-    icon: DeviceListIcon,
-  },
-  {
-    name: 'Encrypted and anonymized',
-    description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
-    icon: DeviceLockIcon,
-  },
-  {
-    name: 'Portfolio tracking',
-    description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
-    icon: DeviceChartIcon,
-  },
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      icon: DeviceLockIcon,
+  }
 ]
 
 function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -196,16 +184,19 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            Now is the time to build your journey.
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
         >
           {features.map((feature) => (
             <li

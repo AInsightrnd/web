@@ -227,12 +227,48 @@ export function AboutCompany() {
           </p>
         </div>
 
-        <ul
+        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
+          <div className="relative z-10 mx-auto pt-6 max-w-2xl lg:col-span-6 lg:max-w-none xl:col-span-5">
+            <Image
+              className="h-auto"
+              src={ceoImage}
+              alt={""}
+            />
+            <h3 className="mt-6 font-semibold text-gray-800 text-center">
+              Ahn Jang-hoon, CEO
+            </h3>
+          </div>
+          <div className="relative mt-10 mx-auto grid max-w-2xl lg:max-w-none lg:pt-6 sm:mt-20 lg:col-span-6 lg:row-span-2 lg:mt-0 xl:col-span-7">
+            <p className="mt-2 text-gray-700">
+              Hello,<br />
+              This is Jang Hoon Ahn, the CEO of AInsightCorporation.
+              I am delighted to have the opportunity to introduce our company to you.
+              Our company provides dental and medical software to clinicians. <br />
+              In particular, we offer a program that automatically analyzes two-dimensional x-ray, three-dimensional CBCT images,
+              and intraoral scan data that orthodontists and dental practitioners commonly take when treating orthodontic patients.<br />
+              Manually analyzing two-dimensional cephalograms, three-dimensional CBCT images, or intraoral scan data requires
+              a significant amount of time and effort.<br />
+              Therefore, by utilizing artificial intelligence-based programs, we can automatically analyze these data,
+              enabling efficient diagnosis and treatment planning for orthodontic patients in a short period of time
+              We are also developing an automatic teeth alignment program that considers roots and skeletal structures,
+              which can be used for orthodontic treatment simulations or the production of clear aligners.<br />
+              Additionally, we plan to provide automated three-dimensional simulation programs and surgical guides for orthognathic surgery.<br />
+              Furthermore, we are also planning the development of technology for automated diagnosis for implant surgery. Voice charting is another
+              item in our AI software lineup which we believe could be helpful for general doctors, not only for dentists.
+              As a dentist and orthodontic specialist myself, I understand the challenges and hard work that you face in clinical practice.
+              At our company, we continuously develop excellent dental and medical software to alleviate your hard work even just a little.<br />
+              I sincerely wish you and your families good luck and good health.<br />
+              Thank you
+            </p>
+          </div>
+        </div>
+
+        {/* <ul
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
         >
           <li
-            key='name'
+            key='ceo'
             className="rounded-2xl border-left border-gray-200 p-8"
           >
             <Image
@@ -245,7 +281,7 @@ export function AboutCompany() {
             </h3>
           </li>
           <li
-            key='name'
+            key='message'
             className="rounded-2xl border-left border-gray-200 p-8"
           >
             <p className="mt-2 text-gray-700">
@@ -270,7 +306,7 @@ export function AboutCompany() {
               Thank you
             </p>
           </li>
-        </ul>
+        </ul> */}
 
         <ul
           role="list"

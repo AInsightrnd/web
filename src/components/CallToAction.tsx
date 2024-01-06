@@ -1,11 +1,24 @@
 'use client'
+// import dynamic from 'next/dynamic'
 
 import { AppStoreLink } from '@/components/AppStoreLink'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
+import { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 
+// const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
+
 export function CallToAction() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null // return this null to avoid hydration errors
+  }
+
   return (
     <section
       id="get-free-shares-today"

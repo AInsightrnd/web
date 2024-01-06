@@ -133,6 +133,7 @@ export function Hero() {
                   className="h-[30rem]"
                   src={heroImage}
                   alt={""}
+                  priority={false}
                 />
               </PhoneFrame>
             </div>

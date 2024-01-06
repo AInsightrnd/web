@@ -7,6 +7,7 @@ import { TextField } from '@/components/Fields'
 import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
 import qrCode from '@/images/qr-code.svg'
+import { ImageLogo } from './ImageLogo'
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -27,10 +28,11 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-y-12 pb-6 pt-16 lg:flex-row lg:items-center lg:py-16">
           <div>
             <div className="flex items-center text-gray-900">
-              <Logomark className="h-10 w-10 flex-none fill-cyan-500" />
+              {/* <Logomark className="h-10 w-10 flex-none fill-cyan-500" /> */}
+              <ImageLogo className="h-10 w-auto" />
               <div className="ml-4">
-                <p className="text-base font-semibold">Pocket</p>
-                <p className="mt-1 text-sm">Invest at the perfect time.</p>
+                <p className="text-base font-semibold">AInsight Co. Ltd.</p>
+                <p className="mt-1 text-sm">AI at the perfect time.</p>
               </div>
             </div>
             <nav className="mt-11 flex gap-8">
@@ -50,7 +52,7 @@ export function Footer() {
                 </Link>
               </p>
               <p className="mt-1 text-sm text-gray-700">
-                Scan the QR code to download the app from the App Store.
+                Scan the QR code to download the program from the Store.
               </p>
             </div>
           </div>
