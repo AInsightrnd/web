@@ -38,6 +38,14 @@ const config: Config = {
       },
       colors: ({ colors }) => ({
         gray: colors.neutral,
+        ainblue: {
+          'default': '#3E7EF5',
+          '100': '#F0F5FF',
+          '200': '#EAF1FF',
+          '600': '#90B4F8',
+          '800': '#3E7EF5',
+          '900': '#3572F3',
+        }
       }),
       fontFamily: {
         sans: 'var(--font-inter)',

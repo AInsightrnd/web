@@ -21,7 +21,7 @@ export function ImageLogo(props: ImageLogoProps) {
   return (
     <>
       <Image
-        className={`${props.className} fill-cyan-500`}
+        className={`${props.className} fill-ainblue-800`}
         src={logoMain}
         alt={""}
       />
