@@ -55,10 +55,10 @@ export function Header() {
   return (
     <header>
       <nav>
-        <Container className="relative z-50 flex justify-between py-8">
+        <Container className="relative z-50 flex justify-between py-8 bg-ainbg-main">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <ImageLogo className="h-10 w-auto" />
+              <Logo className="h-6 w-auto" />
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
@@ -104,11 +104,11 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">
-                              Features
+                            <MobileNavLink href="/#services">
+                              Services
                             </MobileNavLink>
-                            <MobileNavLink href="/#reviews">
-                              Reviews
+                            <MobileNavLink href="/#welcome">
+                              Welcome
                             </MobileNavLink>
                             <MobileNavLink href="/#pricing">
                               Pricing
@@ -129,11 +129,11 @@ export function Header() {
               )}
             </Popover>
             {/* <Button href="/login" variant="outline" className="hidden lg:block"> */}
-            <Button href="#" variant="outline" className="hidden lg:block">
+            {/* <Button href="#" variant="outline" className="hidden lg:block">
               Log in
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Download
+            </Button> */}
+            <Button href="#" variant="outline" color='cyan' className="hidden lg:block">
+              Log in
             </Button>
           </div>
         </Container>

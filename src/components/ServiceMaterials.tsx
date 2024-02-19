@@ -174,7 +174,7 @@ function DeviceChartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function SecondaryFeatures() {
+export function ServiceMaterials() {
   return (
     <section
       id="docs"

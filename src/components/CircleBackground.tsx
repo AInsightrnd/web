@@ -2,17 +2,19 @@ import { useId } from 'react'
 
 export function CircleBackground({
   color,
+  size,
   ...props
 }: React.ComponentPropsWithoutRef<'svg'> & {
   color: string
+  size?: string
 }) {
   let id = useId()
 
   return (
     <svg
       viewBox="0 0 558 558"
-      width="558"
-      height="558"
+      width={size === 'lg' ? "800" : "558"}
+      height={size === 'lg' ? "800" : "558"}
       fill="none"
       aria-hidden="true"
       {...props}

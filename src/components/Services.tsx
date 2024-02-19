@@ -583,7 +583,7 @@ function FeaturesMobile() {
   )
 }
 
-export function PrimaryFeatures() {
+export function Services() {
   return (
     <section
       id="features"

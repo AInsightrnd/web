@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player'
 
 // const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
 
-export function CallToAction() {
+export function Welcome() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true)
