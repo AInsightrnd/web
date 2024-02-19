@@ -8,7 +8,6 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import { ImageLogo } from './ImageLogo'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
