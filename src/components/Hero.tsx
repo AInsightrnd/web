@@ -16,6 +16,8 @@ import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
 import heroImage from '@/images/hero/ai-teeth.jpeg'
+import heroExImage from '@/images/hero/ex.gif'
+import { CircleBackground } from './CircleBackground'
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   let id = useId()
@@ -101,34 +103,54 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="overflow-hidden bg-ainbg-main py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-4xl font-medium tracking-tight text-gray-900">
+            <h1 className="text-4xl font-medium tracking-tight text-white">
               NHP CBCT AI Diagnosis
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-lg text-gray-100">
               Cone beam computed tomography(CBCT) has become an essential tool in modern dentistry,
               allowing dentists to analyze the relationship between teeth and the surrounding tissues.
               Deep learning (DL) systems have been integrated into CBCT analysis to improve accuracy and efficiency.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <AppStoreLink />
+              {/* <AppStoreLink /> */}
               <Button
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                variant="outline"
+                href="/#features"
+                variant="solid"
+                color='cyan'
               >
-                <PlayIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2.5">Watch the video</span>
+                {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+                <span className="ml-0">Web AICiTi</span>
+              </Button>
+              <Button
+                href="/#docs"
+                variant="outline"
+                color='cyan'
+              >
+                {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+                <span className="ml-0 text-ainblue-600">Manual</span>
               </Button>
             </div>
           </div>
-          <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
-            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
-            <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
+          <div className="relative w-full mx-auto mt-10 lg:col-span-5 lg:max-w-none lg:mt-0 lg:pt-6 xl:col-span-6">
+          {/* <div className="relative lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6"> */}
+            {/* <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" /> */}
+            <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
+              <CircleBackground color="#3E7EF5" className="animate-spin-slower" />
+            </div>
+            {/* <div className="mx-4 px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32"> */}
+            <Image
+                  className="w-full"
+                  src={heroExImage}
+                  alt={""}
+                  priority={false}
+                />
+            {/* </div> */}
+            {/* <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
               <PhoneFrame className="mx-auto max-w-[366px]" priority>
-                {/* <AppDemo /> */}
                 <Image
                   className="h-[30rem]"
                   src={heroImage}
@@ -136,21 +158,21 @@ export function Hero() {
                   priority={false}
                 />
               </PhoneFrame>
-            </div>
+            </div> */}
           </div>
-          <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
+          {/* <div className="relative -mt-4 lg:col-span-12 lg:mt-0 xl:col-span-12">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
               As featured in
             </p>
             <ul
               role="list"
-              className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
+              className="mt-8 flex flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
             >
               {[
                 ['Forbes', logoForbes],
                 ['TechCrunch', logoTechcrunch],
                 ['Wired', logoWired],
-                ['CNN', logoCnn, 'hidden xl:block'],
+                ['CNN', logoCnn],
                 ['BBC', logoBbc],
                 ['CBS', logoCbs],
                 ['Fast Company', logoFastCompany],
@@ -161,7 +183,7 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

@@ -45,10 +45,14 @@ const config: Config = {
           '600': '#90B4F8',
           '800': '#3E7EF5',
           '900': '#3572F3',
+        },
+        ainbg: {
+          'main': '#011027',
+          'gray': '#292929',
         }
       }),
       fontFamily: {
-        sans: 'var(--font-inter)',
+        sans: ['Pretendard', 'var(--font-inter)'],
       },
       keyframes: {
         'fade-in': {
