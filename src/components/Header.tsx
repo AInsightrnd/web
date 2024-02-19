@@ -45,7 +45,7 @@ function MobileNavLink(
   return (
     <Popover.Button
       as={Link}
-      className="block text-base leading-7 tracking-tight text-gray-700"
+      className="block text-base leading-7 tracking-tight text-ainblue-600"
       {...props}
     />
   )
@@ -69,7 +69,7 @@ export function Header() {
               {({ open }) => (
                 <>
                   <Popover.Button
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 ui-not-focus-visible:outline-none"
+                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-100 p-2 hover:bg-ainblue-600 hover:stroke-ainblue-600 active:stroke-ainblue-600 ui-not-focus-visible:outline-none"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>
@@ -101,7 +101,7 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-ainbg-main px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#services">
@@ -110,16 +110,14 @@ export function Header() {
                             <MobileNavLink href="/#welcome">
                               Welcome
                             </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
+                            <MobileNavLink href="/#about-company">
+                              Company
                             </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/login" variant="outline">
+                            <Button href="/login" variant="outline" color='cyan'>
                               Log in
                             </Button>
-                            <Button href="#">Download the app</Button>
                           </div>
                         </Popover.Panel>
                       </>
@@ -132,7 +130,7 @@ export function Header() {
             {/* <Button href="#" variant="outline" className="hidden lg:block">
               Log in
             </Button> */}
-            <Button href="#" variant="outline" color='cyan' className="hidden lg:block">
+            <Button href="/login" variant="outline" color='cyan' className="hidden lg:block">
               Log in
             </Button>
           </div>

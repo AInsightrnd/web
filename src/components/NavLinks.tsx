@@ -11,7 +11,7 @@ export function NavLinks() {
   return [
     ['Services', '/#services'],
     ['Welcome', '/#welcome'],
-    ['Company', '/#pricing'],
+    ['Company', '/#acount-company'],
   ].map(([label, href], index) => (
     <Link
       key={label}

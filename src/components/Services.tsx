@@ -586,7 +586,7 @@ function FeaturesMobile() {
 export function Services() {
   return (
     <section
-      id="features"
+      id="services"
       aria-label="Features for investing all your money"
       className="bg-gray-900 py-20 sm:py-32 justify-center"
     >
