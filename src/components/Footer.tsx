@@ -4,10 +4,8 @@ import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { TextField } from '@/components/Fields'
-import { Logomark } from '@/components/Logo'
+import { LogoFooter } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import qrCode from '@/images/qr-code.svg'
-import { ImageLogo } from './ImageLogo'
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -29,17 +27,33 @@ export function Footer() {
           <div>
             <div className="flex items-center text-gray-900">
               {/* <Logomark className="h-10 w-10 flex-none fill-ainblue-800" /> */}
-              <ImageLogo className="h-10 w-auto" />
+              {/* <ImageLogo className="h-10 w-auto" /> */}
+              <LogoFooter className="h-6 w-auto" />
               <div className="ml-4">
                 <p className="text-base font-semibold">AInsight Co. Ltd.</p>
-                <p className="mt-1 text-sm">AI at the perfect time.</p>
+                <p className="mt-0 text-sm">AI dental solution software</p>
               </div>
             </div>
-            <nav className="mt-11 flex gap-8">
+            {/* <nav className="mt-11 flex gap-8">
+              <NavLinks />
+            </nav> */}
+          </div>
+          <div>
+            <nav className="mt-0 flex gap-8">
               <NavLinks />
             </nav>
           </div>
-          <div className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
+          <div>
+            <div className="flex items-center text-gray-900">
+              <div className="ml-4">
+                <p className="text-base font-semibold">대표자: 안장훈</p>
+                <p className="mt-0 text-sm">사업자등록번호: 658-86-01914</p>
+                <p className="mt-0 text-sm">전화: 02 2677-3579 이메일 admin@ainsightortho.com</p>
+                <p className="mt-0 text-sm">본사: 서울특별시 구로구 경인로 661, 104동 1112호 (신도림푸르지오1차)</p>
+              </div>
+            </div>
+          </div>
+          {/* <div className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
             <div className="relative flex h-24 w-24 flex-none items-center justify-center">
               <QrCodeBorder className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-ainblue-800" />
               <Image src={qrCode} alt="" unoptimized />
@@ -55,7 +69,7 @@ export function Footer() {
                 Scan the QR code to download the program from the Store.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">
           <form className="flex w-full justify-center md:w-auto">
