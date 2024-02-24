@@ -105,6 +105,20 @@ export function Hero() {
   return (
     <div className="overflow-hidden h-screen bg-ainbg-main py-20 sm:py-32 lg:pb-32 xl:pb-36">
       <Container>
+      <div className="absolute inset-0 overflow-hidden">
+          <video
+            loop
+            autoPlay
+            muted
+            id="bg-video"
+            className="min-w-full min-h-full w-auto h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            >
+            <source
+              src='/main-bg-sample-720p.mp4'
+              type="video/mp4"
+              />
+          </video>
+        </div>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-white">
@@ -141,13 +155,16 @@ export function Hero() {
             <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
               <CircleBackground color="#3E7EF5" size='lg' className="animate-spin-slower" />
             </div>
+            
             {/* <div className="mx-4 px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32"> */}
-            <Image
+            
+            {/* <Image
                   className="w-full"
                   src={heroExImage}
                   alt={""}
                   priority={false}
-                />
+                /> */}
+            
             {/* </div> */}
             {/* <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
               <PhoneFrame className="mx-auto max-w-[366px]" priority>
