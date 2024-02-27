@@ -4,6 +4,7 @@ import { Services } from '@/components/Services'
 import { ServiceMaterials } from '@/components/ServiceMaterials'
 import { AboutCompany } from '../../components/AboutCompany'
 import { Awarded } from '../../components/Awarded'
+import { Modal } from '../../components/Modal'
 
 export default function Home() {
 
@@ -35,7 +36,6 @@ export default function Home() {
 
   //   </div>
   // )
-
 
   return (
     <>
