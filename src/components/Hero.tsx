@@ -124,7 +124,7 @@ export function Hero() {
               className="min-w-full min-h-full w-auto h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               >
               <source
-                src='/main-bg-sample-720p.mp4'
+                src='/main-bg-1920.mp4'
                 type="video/mp4"
                 />
             </video>

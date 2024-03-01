@@ -40,29 +40,34 @@ interface CustomAnimationProps {
 const features = [
   {
     name: 'AICiTi Program',
+    description: `AICiTi 프로그램은 치과의사 및 성형외과 전문의,
+    특히 치아교정 전문의들을 위해 치과용 CBCT(Cone Beam Computed Tomography) 영상에서 
+    딥러닝 모델을 이용해 치아 교정 진단에 필요한 랜드마크를 자동 검출, 분석을 제공합니다
+    랜드마크에서 추출된 치아 파라미터를 분석, 교정 진단에 필요한 수치를 출력해 결과를 원본 영상 위에 표시하여 
+    환자에게 필요한 정보를 효율적으로 시각화할 수 있는 프로그램입니다.
+    또한 각 랜드마크는 오류 수정, 비교 또는 기타 목적을 위해 직접 수정이 가능합니다.`,
+    icon: DeviceUserIcon,
+    screen: FirstScreen,
+    // screen: aicitiImage
+  },
+  {
+    name: 'CBCT영상 자동분석',
     description: `AI model program (Intraoral Scan의 치아모형 자동분석),
       AI merging program (CBCT영상 + Intraoral scan + Face scan 자동병합),
       AI setup program (Root를 포함한 전체치아를 자동배열한 셋업결과를 이용. 투명교정 장치를 제작할 수 있는 프로그램),
-      Virtual sugery simulaltion program (가상 양악수술 시뮬레이션 프로그램),
-      Surgical guide printing program (Virtual sugery simulaltion program을
-          통해 확정된 양악수술을 위한 surgical guide제공),
-      2차원 X-ray 자동분석, Teeth analysis`,
-    icon: DeviceUserIcon,
-    screen: InviteScreen,
-  },
-  {
-    name: 'Under development',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      Virtual sugery simulaltion program (가상 양악수술 시뮬레이션 프로그램)`,
     icon: DeviceNotificationIcon,
-    screen: StocksScreen,
+    screen: SecondScreen,
+    // screen: aicitiImage
   },
   {
-    name: 'TBD',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: '랜드마크 추출 및 편집',
+    description: `Surgical guide printing program (Virtual sugery simulaltion program을
+      통해 확정된 양악수술을 위한 surgical guide제공),
+      2차원 X-ray 자동분석, Teeth analysis`,
     icon: DeviceTouchIcon,
-    screen: InvestScreen,
+    screen: ThirdScreen,
+    // screen: aicitiImage
   },
 ]
 
@@ -197,14 +202,14 @@ type ScreenProps =
     }
   | { animated?: false }
 
-function InviteScreen(props: ScreenProps) {
+function FirstScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
+        <AppScreen.Title>AICiTi Program</AppScreen.Title>
         <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
+          <span className="text-white">30초 </span>
+          내에 분석이 가능합니다
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -225,7 +230,7 @@ function InviteScreen(props: ScreenProps) {
             ))}
           </div>
           <div className="mt-6 rounded-lg bg-ainblue-800 px-3 py-2 text-center text-sm font-semibold text-white">
-            Invite person
+            AICiTi Service
           </div>
         </div>
       </MotionAppScreenBody>
@@ -233,11 +238,11 @@ function InviteScreen(props: ScreenProps) {
   )
 }
 
-function StocksScreen(props: ScreenProps) {
+function SecondScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
+        <AppScreen.Title>CBCT 영상</AppScreen.Title>
         <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -246,57 +251,57 @@ function StocksScreen(props: ScreenProps) {
         <div className="divide-y divide-gray-100">
           {[
             {
-              name: 'Laravel',
-              price: '4,098.01',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '+4.98%',
               color: '#F9322C',
               logo: LaravelLogo,
             },
             {
-              name: 'Tuple',
-              price: '5,451.10',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '-3.38%',
               color: '#5A67D8',
               logo: TupleLogo,
             },
             {
-              name: 'Transistor',
-              price: '4,098.41',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '+6.25%',
               color: '#2A5B94',
               logo: TransistorLogo,
             },
             {
-              name: 'Diageo',
-              price: '250.65',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '+1.25%',
               color: '#3320A7',
               logo: DiageoLogo,
             },
             {
-              name: 'StaticKit',
-              price: '250.65',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '-3.38%',
               color: '#2A3034',
               logo: StaticKitLogo,
             },
             {
-              name: 'Statamic',
-              price: '5,040.85',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '-3.11%',
               color: '#0EA5E9',
               logo: StatamicLogo,
             },
             {
-              name: 'Mirage',
-              price: '140.44',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '+9.09%',
               color: '#16A34A',
               logo: MirageLogo,
             },
             {
-              name: 'Reversable',
-              price: '550.60',
+              name: 'Cone Beam 1',
+              price: '10, 30, 50',
               change: '-1.25%',
               color: '#8D8D8D',
               logo: ReversableLogo,
@@ -335,13 +340,13 @@ function StocksScreen(props: ScreenProps) {
   )
 }
 
-function InvestScreen(props: ScreenProps) {
+function ThirdScreen(props: ScreenProps) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
+        <AppScreen.Title>랜드마크 추출 및 편집</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
+          <span className="text-white">34.28</span> 오류 수정, 비교
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -381,7 +386,7 @@ function InvestScreen(props: ScreenProps) {
               </div>
             ))}
             <div className="rounded-lg bg-ainblue-800 px-3 py-2 text-center text-sm font-semibold text-white">
-              Buy shares
+              랜드마크 추출
             </div>
           </div>
         </div>
@@ -432,7 +437,7 @@ function FeaturesDesktop() {
             {featureIndex === selectedIndex && (
               <motion.div
                 layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
+                className="absolute inset-0"
                 initial={{ borderRadius: 16 }}
               />
             )}
@@ -606,10 +611,10 @@ export function Services() {
           </p>
         </div>
       </Container>
-      {/* <div className="mt-16 md:hidden">
+      <div className="mt-16 md:hidden">
         <FeaturesMobile />
-      </div> */}
-      <Container className="md:mt-20 md:block">
+      </div>
+      <Container className="md:mt-20 hidden md:block">
         <FeaturesDesktop />
       </Container>
     </section>
