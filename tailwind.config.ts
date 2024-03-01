@@ -47,7 +47,8 @@ const config: Config = {
           '900': '#3572F3',
         },
         ainbg: {
-          'main': '#011027',
+          'primary': '#011027',
+          'secondary': '#042039',
           'gray': '#292929',
         }
       }),

@@ -33,7 +33,7 @@ export function Modal({
             <Link
               href="https://forms.gle/zomMStTYqeXVeRzw8"
               onClick={() => onClose(false)}
-              className="m-2 px-4 py-2 w-full text-center bg-ainbg-main text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="m-2 px-4 py-2 w-full text-center bg-ainbg-primary text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300"
             >
               자세히보기
             </Link>

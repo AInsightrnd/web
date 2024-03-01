@@ -211,14 +211,14 @@ export function AboutCompany() {
     <section
       id="about-company"
       aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32"
+      className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+          <h2 className="text-3xl font-semibold tracking-tight text-gray-50">
             We are changing the way people smile
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-lg text-gray-200">
             Ainsight is an artificial intelligence orthodontic correction program designed to make data,
             based on information accessible to everyone,
             easily understandable for both professionals and the general public.
@@ -234,12 +234,12 @@ export function AboutCompany() {
               src={ceoImage}
               alt={""}
             />
-            <h3 className="mt-6 font-semibold text-gray-800 text-center">
+            <h3 className="mt-6 font-semibold text-gray-200 text-center">
               Ahn Jang-hoon, CEO
             </h3>
           </div>
           <div className="relative mt-10 mx-auto grid max-w-2xl lg:max-w-none lg:pt-6 sm:mt-20 lg:col-span-6 lg:row-span-2 lg:mt-0 xl:col-span-7">
-            <p className="mt-2 text-gray-700">
+            <p className="mt-2 text-gray-200">
               Hello,<br />
               This is Jang Hoon Ahn, the CEO of AInsightCorporation.
               I am delighted to have the opportunity to introduce our company to you.
@@ -318,10 +318,10 @@ export function AboutCompany() {
               className="rounded-2xl border border-gray-200 p-8"
             >
               <history.icon className="h-8 w-8" />
-              <h3 className="mt-6 font-semibold text-gray-900">
+              <h3 className="mt-6 font-semibold text-gray-50">
                 {history.name}
               </h3>
-              <p className="mt-2 text-gray-700">{history.description}</p>
+              <p className="mt-2 text-gray-200">{history.description}</p>
             </li>
           ))}
         </ul>

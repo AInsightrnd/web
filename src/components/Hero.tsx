@@ -113,7 +113,7 @@ export function Hero() {
   return (
     <>
       {showModal && <Modal onClose={setShowModal} />}
-      <div className="overflow-hidden h-screen bg-ainbg-main py-20 sm:py-32 lg:pb-32 xl:pb-36">
+      <div className="overflow-hidden h-screen bg-ainbg-primary py-20 sm:py-32 lg:pb-32 xl:pb-36">
         <Container>
         <div className="absolute inset-0 overflow-hidden">
             <video
@@ -131,10 +131,10 @@ export function Hero() {
           </div>
           <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
             <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-              <h1 className="text-4xl font-medium tracking-tight text-white">
+              <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
                 NHP CBCT AI Diagnosis
               </h1>
-              <p className="mt-6 text-lg text-gray-100">
+              <p className="mt-6 text-lg text-gray-200">
                 Cone beam computed tomography(CBCT) has become an essential tool in modern dentistry,
                 allowing dentists to analyze the relationship between teeth and the surrounding tissues.
                 Deep learning (DL) systems have been integrated into CBCT analysis to improve accuracy and efficiency.
