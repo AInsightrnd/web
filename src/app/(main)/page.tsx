@@ -2,9 +2,11 @@ import { Welcome } from '@/components/Welcome'
 import { Hero } from '@/components/Hero'
 import { Services } from '@/components/Services'
 import { ServiceMaterials } from '@/components/ServiceMaterials'
-import { AboutCompany } from '../../components/AboutCompany'
-import { Awarded } from '../../components/Awarded'
+import { CeoMessage } from '../../components/CeoMessage'
+import { Docs } from '../../components/Docs'
 import { Modal } from '../../components/Modal'
+import { CompanyHistory } from '../../components/CompanyHistory'
+import { AboutCompany } from '../../components/AboutCompany'
 
 export default function Home() {
 
@@ -40,14 +42,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      
       <Services />
       <ServiceMaterials />
-
-      <Welcome />
-
       <AboutCompany />
-      <Awarded />
+      <CeoMessage />
+      <CompanyHistory />
+      <Docs />
     </>
   )
 }

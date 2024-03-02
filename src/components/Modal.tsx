@@ -11,7 +11,7 @@ export function Modal({
 }) {
 
   return (
-    <div className="z-20 fixed inset-0 bg-gray-800 bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center">
+    <div className="z-50 fixed inset-0 bg-gray-800 bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center">
       <div className="w-2/3 border border-gray-400 xs:w-1/3 md:w-2/5 xl:w-1/4 shadow-lg rounded-md bg-white">
         <div className="">
           <h3 className="p-0 text-sm text bg-gray-400 m-0">

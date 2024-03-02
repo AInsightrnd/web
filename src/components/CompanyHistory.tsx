@@ -1,32 +1,64 @@
 import { useId } from 'react'
 
 import { Container } from '@/components/Container'
+import Image from 'next/image'
+import ceoImage from '@/images/company/ceo-ahn.png'
 
-const features = [
+const histories = [
   {
-    name: 'Video',
+    name: '2023 June (6/30)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      `AICiTi program version 7.7 출시`,
       icon: DeviceClockIcon,
   },
   {
-    name: 'Treatise',
+    name: '2023 April (4/25)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      `산자부 주관 중견 중소 기업 상생형 혁신 도약 사업 과제 선정
+      (주관기업 – 바텍사, 총 사업비 – 39억, 
+      주식회사 아인사이트 – 6억)`,
+    icon: DeviceArrowIcon,
+  },
+  {
+    name: '2023 March (3/23)',
+    description:
+      `자연 두부 위치에서 촬영된 엑스레이(X-ray) 이미지를 이용한 기계학습 기반 치아 교정 진단을 위한 
+      두부계측 파라미터 도출방법 – 국내 출원 완료`,
+      icon: DeviceLockIcon,
+  },
+  {
+    name: '2022 September (9/8)',
+    description:
+      `Computer Methods and Programs in Biomedicine에 “Automated analysis of three-dimensional CBCT
+      images taken in natural head position that combinesfacial profile processing and multiple deep-learning models” 프로그램 검증 논문 게재.`,
     icon: DeviceCardsIcon,
   },
   {
-    name: 'User-guide',
+    name: '2022 April (4/29)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      icon: DeviceListIcon,
+      `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계 학습 기반 치아교정 진단을 위한 
+      두부 계측 파라미터 도출방법 – PCT 출원 완료`,
+      icon: DeviceLockIcon,
   },
   {
-    name: 'CBCT',
+    name: '2022 March (3/5)',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계  학습 기반  치아교정 진단을 위한 
+      두부 계측 파라미터 도출방법 – 국내 특허 등록 완료`,
       icon: DeviceLockIcon,
-  }
+  },
+  {
+    name: '2021 September (9/10)',
+    description:
+      'AICiTi program version 4.1 출시',
+      icon: DeviceClockIcon,
+  },
+  {
+    name: '2021 April (4/5)',
+    description:
+      '회사 창립',
+    icon: DeviceChartIcon,
+  },
 ]
 
 function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -174,40 +206,34 @@ function DeviceChartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export function ServiceMaterials() {
+export function CompanyHistory() {
   return (
     <section
-      id="service-materials"
+      id="company-history"
       aria-label="Features for building a portfolio"
       className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-50">
-            Now is the time to build your journey.
+            약력
           </h2>
-          <p className="mt-2 text-lg text-gray-200">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, 
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
         </div>
+
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
-          {features.map((feature) => (
+          {histories.map((history) => (
             <li
-              key={feature.name}
+              key={history.name}
               className="rounded-2xl border border-gray-200 p-8"
             >
-              <feature.icon className="h-8 w-8" />
+              <history.icon className="h-8 w-8" />
               <h3 className="mt-6 font-semibold text-gray-50">
-                {feature.name}
+                {history.name}
               </h3>
-              <p className="mt-2 text-gray-200">{feature.description}</p>
+              <p className="mt-2 text-gray-200">{history.description}</p>
             </li>
           ))}
         </ul>

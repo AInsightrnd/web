@@ -6,11 +6,11 @@ import patentImage from '@/images/company/patent.png'
 import treatiseImage from '@/images/company/treatise.png'
 import bookImage from '@/images/company/book.png'
 
-export function Awarded() {
+export function Docs() {
 
   return (
     <section
-      id="get-free-shares-today"
+      id="docs"
       className="relative overflow-hidden bg-ainbg-primary py-20 sm:py-28"
     >
       {/* <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
@@ -19,7 +19,7 @@ export function Awarded() {
       <Container className="relative">
         <div className="mx-auto max-w-md sm:text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-50 sm:text-4xl">
-            Key achievements
+            매뉴얼/논문
           </h2>
         </div>
         <div className="mt-12 space-x-8 flex justify-center">

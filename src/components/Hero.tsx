@@ -115,7 +115,7 @@ export function Hero() {
       {showModal && <Modal onClose={setShowModal} />}
       <div className="overflow-hidden h-screen bg-ainbg-primary py-20 sm:py-32 lg:pb-32 xl:pb-36">
         <Container>
-        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
             <video
               loop
               autoPlay
