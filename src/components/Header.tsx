@@ -113,7 +113,7 @@ export function Header() {
                               대표인사
                             </MobileNavLink>
                             <MobileNavLink href="/#company-history">
-                              약력
+                              회사연혁
                             </MobileNavLink>
                             <MobileNavLink href="/#docs">
                               매뉴얼/논문
