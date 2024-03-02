@@ -2,7 +2,7 @@ import { useId } from 'react'
 
 import { Container } from '@/components/Container'
 import Image from 'next/image'
-import ceoImage from '@/images/company/ceo.png'
+import ceoImage from '@/images/company/ceo-ahn.png'
 
 const histories = [
   {
@@ -228,16 +228,6 @@ export function AboutCompany() {
         </div>
 
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-          <div className="relative z-10 mx-auto pt-6 max-w-2xl lg:col-span-6 lg:max-w-none xl:col-span-5">
-            <Image
-              className="h-auto"
-              src={ceoImage}
-              alt={""}
-            />
-            <h3 className="mt-6 font-semibold text-gray-200 text-center">
-              Ahn Jang-hoon, CEO
-            </h3>
-          </div>
           <div className="relative mt-10 mx-auto grid max-w-2xl lg:max-w-none lg:pt-6 sm:mt-20 lg:col-span-6 lg:row-span-2 lg:mt-0 xl:col-span-7">
             <p className="mt-2 text-gray-200">
               Hello,<br />
@@ -260,6 +250,16 @@ export function AboutCompany() {
               I sincerely wish you and your families good luck and good health.<br />
               Thank you
             </p>
+          </div>
+          <div className="relative z-10 mx-auto pt-6 max-w-2xl lg:col-span-6 lg:max-w-none xl:col-span-5">
+            <Image
+              className="h-auto"
+              src={ceoImage}
+              alt={""}
+            />
+            <h3 className="mt-6 font-semibold text-gray-200 text-center">
+              Ahn Jang-hoon, CEO
+            </h3>
           </div>
         </div>
 
