@@ -11,17 +11,18 @@ export function Docs() {
   return (
     <section
       id="docs"
-      className="relative overflow-hidden bg-ainbg-primary py-20 sm:py-28"
+      className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-secondary"
     >
       {/* <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground color="#fff" className="animate-spin-slower" />
       </div> */}
-      <Container className="relative">
-        <div className="mx-auto max-w-md sm:text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-50 sm:text-4xl">
+      <Container>
+        <div className="mx-auto max-w-3xl lg:mx-0">
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             매뉴얼/논문
-          </h2>
+          </h1>
         </div>
+        
         <div className="mt-12 space-x-8 flex justify-center">
           <Image
             className="w-1/4"

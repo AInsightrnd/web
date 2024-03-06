@@ -3,207 +3,80 @@ import { useId } from 'react'
 import { Container } from '@/components/Container'
 import Image from 'next/image'
 import ceoImage from '@/images/company/ceo-ahn.png'
+import { ViewfinderCircleIcon } from '@heroicons/react/20/solid'
 
-const histories = [
-  {
-    name: '2023 June (6/30)',
-    description:
-      `AICiTi program version 7.7 출시`,
-      icon: DeviceClockIcon,
+const activity = [
+  { id: 1, type: 'new-year',
+    history: {
+      name: '회사 창립',
+      description: '',
+    }, 
+    date: '2021-04-05',
   },
-  {
-    name: '2023 April (4/25)',
-    description:
-      `산자부 주관 중견 중소 기업 상생형 혁신 도약 사업 과제 선정
-      (주관기업 – 바텍사, 총 사업비 – 39억, 
-      주식회사 아인사이트 – 6억)`,
-    icon: DeviceArrowIcon,
+  { id: 2, type: 'month',
+    history: {
+      name: '제품출시 - AICiTi',
+      description: 'AICiTi program version 4.1 출시',
+    }, 
+    date: '2021-09-10',
   },
-  {
-    name: '2023 March (3/23)',
-    description:
-      `자연 두부 위치에서 촬영된 엑스레이(X-ray) 이미지를 이용한 기계학습 기반 치아 교정 진단을 위한 
-      두부계측 파라미터 도출방법 – 국내 출원 완료`,
-      icon: DeviceLockIcon,
+  { id: 3, type: 'new-year',
+    history: {
+      name: '국내특허 등록',
+      description:
+        `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계  학습 기반  치아교정 진단을 위한 
+        두부 계측 파라미터 도출방법 – 국내 특허 등록 완료`,
+    }, 
+    date: '2022-03-05',
   },
-  {
-    name: '2022 September (9/8)',
-    description:
+  { id: 4, type: 'month',
+    history: {
+      name: 'PCT출원 완료',
+      description:
+        `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계  학습 기반  치아교정 진단을 위한 
+        두부 계측 파라미터 도출방법 – 국내 특허 등록 완료`,
+    }, 
+    date: '2022-04-29',
+  },
+  { id: 5, type: 'month',
+    history: {
+      name: '논문 게재',
+      description:
       `Computer Methods and Programs in Biomedicine에 “Automated analysis of three-dimensional CBCT
       images taken in natural head position that combinesfacial profile processing and multiple deep-learning models” 프로그램 검증 논문 게재.`,
-    icon: DeviceCardsIcon,
+    }, 
+    date: '2022-09-08',
   },
-  {
-    name: '2022 April (4/29)',
-    description:
-      `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계 학습 기반 치아교정 진단을 위한 
-      두부 계측 파라미터 도출방법 – PCT 출원 완료`,
-      icon: DeviceLockIcon,
+  { id: 6, type: 'new-year',
+    history: {
+      name: '국내출원 완료',
+      description:
+        `자연 두부 위치에서 촬영된 엑스레이(X-ray) 이미지를 이용한 기계학습 기반 치아 교정 진단을 위한 
+        두부계측 파라미터 도출방법 – 국내 출원 완료`,
+    }, 
+    date: '2023-03-23',
   },
-  {
-    name: '2022 March (3/5)',
-    description:
-      `자연 두부 위치에서 촬영된 3차원 CBCT 영상에서 기계  학습 기반  치아교정 진단을 위한 
-      두부 계측 파라미터 도출방법 – 국내 특허 등록 완료`,
-      icon: DeviceLockIcon,
+  { id: 7, type: 'month',
+    history: {
+      name: '사업과제 선정',
+      description:
+        `산자부 주관 중견 중소 기업 상생형 혁신 도약 사업 과제 선정
+        (주관기업 – 바텍사, 총 사업비 – 39억, 
+        주식회사 아인사이트 – 6억)`,
+    }, 
+    date: '2023-04-25',
   },
-  {
-    name: '2021 September (9/10)',
-    description:
-      'AICiTi program version 4.1 출시',
-      icon: DeviceClockIcon,
-  },
-  {
-    name: '2021 April (4/5)',
-    description:
-      '회사 창립',
-    icon: DeviceChartIcon,
+  { id: 8, type: 'month',
+    history: {
+      name: '제품출시 - AICiTi',
+      description: `AICiTi program version 7.7 출시`,
+    }, 
+    date: '2023-06-30',
   },
 ]
 
-function DeviceArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
-        fill="#737373"
-      />
-      <path
-        d="M12 25l8-8m0 0h-6m6 0v6"
-        stroke="#171717"
-        strokeWidth={2}
-        strokeLinecap="round"
-      />
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-    </svg>
-  )
-}
-
-function DeviceCardsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  let id = useId()
-
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
-        fill="#737373"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 13a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2zm1 5a1 1 0 00-1 1v2a1 1 0 001 1h12a1 1 0 001-1v-2a1 1 0 00-1-1H10z"
-        fill={`url(#${id}-gradient)`}
-      />
-      <rect x={9} y={6} width={14} height={4} rx={1} fill="#171717" />
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <defs>
-        <linearGradient
-          id={`${id}-gradient`}
-          x1={16}
-          y1={12}
-          x2={16}
-          y2={28}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#737373" />
-          <stop offset={1} stopColor="#737373" stopOpacity={0} />
-        </linearGradient>
-      </defs>
-    </svg>
-  )
-}
-
-function DeviceClockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 4a4 4 0 014-4h14a4 4 0 014 4v10h-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 002 2h5v2H9a4 4 0 01-4-4V4z"
-        fill="#737373"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 32a8 8 0 100-16 8 8 0 000 16zm1-8.414V19h-2v5.414l4 4L28.414 27 25 23.586z"
-        fill="#171717"
-      />
-    </svg>
-  )
-}
-
-function DeviceListIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
-        fill="#737373"
-      />
-      <circle cx={11} cy={14} r={2} fill="#171717" />
-      <circle cx={11} cy={20} r={2} fill="#171717" />
-      <circle cx={11} cy={26} r={2} fill="#171717" />
-      <path
-        d="M16 14h6M16 20h6M16 26h6"
-        stroke="#737373"
-        strokeWidth={2}
-        strokeLinecap="square"
-      />
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-    </svg>
-  )
-}
-
-function DeviceLockIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M5 4a4 4 0 014-4h14a4 4 0 014 4v10h-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 002 2h5v2H9a4 4 0 01-4-4V4z"
-        fill="#737373"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M18 19.5a3.5 3.5 0 117 0V22a2 2 0 012 2v6a2 2 0 01-2 2h-7a2 2 0 01-2-2v-6a2 2 0 012-2v-2.5zm2 2.5h3v-2.5a1.5 1.5 0 00-3 0V22z"
-        fill="#171717"
-      />
-    </svg>
-  )
-}
-
-function DeviceChartIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
-        fill="#737373"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M23 13.838V26a2 2 0 01-2 2H11a2 2 0 01-2-2V15.65l2.57 3.212a1 1 0 001.38.175L15.4 17.2a1 1 0 011.494.353l1.841 3.681c.399.797 1.562.714 1.843-.13L23 13.837z"
-        fill="#171717"
-      />
-      <path
-        d="M10 12h12"
-        stroke="#737373"
-        strokeWidth={2}
-        strokeLinecap="square"
-      />
-      <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-    </svg>
-  )
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
 }
 
 export function CompanyHistory() {
@@ -211,29 +84,48 @@ export function CompanyHistory() {
     <section
       id="company-history"
       aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32 bg-ainbg-secondary"
+      className="py-20 sm:py-32 bg-ainbg-primary"
     >
       <Container>
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-50">
-            약력
-          </h2>
+        <div className="mx-auto max-w-3xl lg:mx-0">
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
+            회사연혁
+          </h1>
         </div>
 
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-        >
-          {histories.map((history) => (
-            <li
-              key={history.name}
-              className="rounded-2xl border border-gray-200 p-8"
-            >
-              <history.icon className="h-8 w-8" />
-              <h3 className="mt-6 font-semibold text-gray-50">
-                {history.name}
-              </h3>
-              <p className="mt-2 text-gray-200">{history.description}</p>
+        <ul role="list" className="mt-12 mx-10 md:mx-20 lg:mx-60 space-y-6">
+          {activity.map((activityItem, activityItemIdx) => (
+            <li key={activityItem.id} className="relative flex gap-x-4">
+              <div className="mt-1 text-ainblue-600 text-lg font-bold" 
+              >
+                {activityItem.type === 'new-year' ?
+                  <p className='ml-2.5'>{activityItem.date.split('-')[0]}</p> :
+                  <p className='ml-14' />
+                }
+              </div>
+              <div
+                className={classNames(
+                  activityItemIdx === activity.length - 1 ? 'h-1' : '-bottom-10',
+                  'absolute left-20 top-4 flex w-6 justify-center'
+                )}
+              >
+                <div className="w-px bg-gray-200" />
+              </div>
+              
+              <div className="relative flex h-10 w-10 flex-none items-center justify-center bg-transparent">
+                {activityItem.type === 'new-year' ? 
+                  <ViewfinderCircleIcon className="h-10 w-10 text-ainblue-200" aria-hidden="true" />
+                  : (
+                  <div className="h-2 w-2 rounded-full bg-gray-100 ring-1 ring-gray-300" />
+                )}
+              </div>
+              <p className="flex-auto mt-2 pr-10 text-xs leading-5 text-gray-500">
+                <div className="font-bold text-sm text-gray-50">{activityItem.history.name}</div> 
+                <div className="font-medium text-gray-200">{activityItem.history.description}</div> 
+              </p>
+              <time className="flex-none py-0.5 text-xs leading-5 text-gray-500">
+                {activityItem.date}
+              </time>
             </li>
           ))}
         </ul>

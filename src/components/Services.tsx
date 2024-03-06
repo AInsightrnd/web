@@ -593,14 +593,14 @@ export function Services() {
     <section
       id="services"
       aria-label="Features for investing all your money"
-      className="bg-ainbg-primary py-20 sm:py-32 justify-center"
+      className="py-20 sm:py-32 bg-ainbg-primary"
     >
       <Container>
-        <div className="mx-auto max-w-none lg:mx-0">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-50">
-            Every feature you need to focus on patients. Try it for yourself.
-          </h2>
-          <p className="mt-2 text-lg text-gray-200">
+        <div className="mx-auto max-w-3xl lg:mx-0">
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
+            서비스소개
+          </h1>
+          <p className="mt-4 text-lg text-gray-200">
             Our program automatically detects landmarks and analyzes dental parameters 
             extracted from the landmarks to output necessary for orthodontic diagnosis parameters 
             using deep learning models on CBCT images for dentists and plastic surgeons especially for orthodontists,
@@ -614,7 +614,7 @@ export function Services() {
       <div className="mt-16 md:hidden">
         <FeaturesMobile />
       </div>
-      <Container className="md:mt-20 hidden md:block">
+      <Container className="md:mt-12 hidden md:block">
         <FeaturesDesktop />
       </Container>
     </section>

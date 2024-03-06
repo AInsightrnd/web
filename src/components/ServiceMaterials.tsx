@@ -182,11 +182,11 @@ export function ServiceMaterials() {
       className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-50">
+        <div className="mx-auto max-w-3xl lg:mx-0">
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             Now is the time to build your journey.
-          </h2>
-          <p className="mt-2 text-lg text-gray-200">
+          </h1>
+          <p className="mt-4 text-lg text-gray-200">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -196,7 +196,7 @@ export function ServiceMaterials() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
+          className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
         >
           {features.map((feature) => (
             <li
