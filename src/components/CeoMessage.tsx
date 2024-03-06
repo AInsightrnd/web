@@ -1,21 +1,21 @@
 import { useId } from 'react'
 import { Container } from '@/components/Container'
 import Image from 'next/image'
-import ceoImage from '@/images/company/ceo-ahn.png'
+import ceoImage from '@/images/ceo-message/profile.png'
 
 export function CeoMessage() {
   return (
     <section
       id="ceo-message"
       aria-label="Features for building a portfolio"
-      className="py-0 sm:py-32 bg-ainbg-secondary"
+      className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
         <div className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             We are changing the way people smile
           </h1>
-          <p className="mt-2 text-lg text-gray-200">
+          <p className="mt-4 text-lg text-gray-200">
             Ainsight is an artificial intelligence orthodontic correction program designed to make data,
             based on information accessible to everyone,
             easily understandable for both professionals and the general public.
@@ -38,17 +38,17 @@ export function CeoMessage() {
               Therefore, by utilizing artificial intelligence-based programs, we can automatically analyze these data,
               enabling efficient diagnosis and treatment planning for orthodontic patients in a short period of time
               We are also developing an automatic teeth alignment program that considers roots and skeletal structures,
-              which can be used for orthodontic treatment simulations or the production of clear aligners.<br />
+              which can be used for orthodontic treatment simulations or the production of clear aligners.<br /><br />
               Additionally, we plan to provide automated three-dimensional simulation programs and surgical guides for orthognathic surgery.<br />
               Furthermore, we are also planning the development of technology for automated diagnosis for implant surgery. Voice charting is another
               item in our AI software lineup which we believe could be helpful for general doctors, not only for dentists.
               As a dentist and orthodontic specialist myself, I understand the challenges and hard work that you face in clinical practice.
-              At our company, we continuously develop excellent dental and medical software to alleviate your hard work even just a little.<br />
+              At our company, we continuously develop excellent dental and medical software to alleviate your hard work even just a little.<br /><br />
               I sincerely wish you and your families good luck and good health.<br />
               Thank you
             </p>
           </div>
-          <div className="relative z-10 mx-auto mt-12 max-w-2xl lg:col-span-6 lg:max-w-none xl:col-span-5">
+          <div className="relative z-10 mx-auto mt-12 max-w-3xl lg:col-span-6 lg:max-w-lg xl:col-span-5 xl:max-w-md">
             <Image
               className="h-auto"
               src={ceoImage}
