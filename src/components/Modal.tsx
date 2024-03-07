@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
-import modalImage from '@/images/hero/modal_b.png'
+import modalImage from '@/images/hero/modal_s.png'
 import Image from "next/image"
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
@@ -19,7 +19,7 @@ export function Modal({
               <XMarkIcon className="p-1 h-8 w-8 text-white" />
             </Link>
           </h3>
-          <div className="mt-2 px-2 py-3">
+          <div className="mt-2 px-2 py-2">
             <Image
               className="w-full"
               src={modalImage}
@@ -27,7 +27,7 @@ export function Modal({
               priority={false}
             />            
           </div>
-          <div className="flex justify-center mt-2">
+          <div className="flex justify-center mt-0">
 
             {/* Navigates back to the base URL - closing the modal */}
             <Link
@@ -35,7 +35,7 @@ export function Modal({
               onClick={() => onClose(false)}
               className="m-2 px-4 py-2 w-full text-center bg-ainbg-primary text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300"
             >
-              자세히보기
+              사전등록신청
             </Link>
 
           </div>
