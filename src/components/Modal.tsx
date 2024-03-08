@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
-import modalImage from '@/images/hero/modal_s.png'
+import modalImage from '@/images/hero/modal_s_0308.png'
 import Image from "next/image"
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
@@ -35,7 +35,7 @@ export function Modal({
               onClick={() => onClose(false)}
               className="m-2 px-4 py-2 w-full text-center bg-ainbg-primary text-white text-base font-medium rounded-md shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-300"
             >
-              사전등록신청
+              사전등록 신청하기
             </Link>
 
           </div>
