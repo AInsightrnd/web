@@ -117,11 +117,11 @@ export function CompanyHistory() {
                   <div className="h-2 w-2 rounded-full bg-gray-100 ring-1 ring-gray-300" />
                 )}
               </div>
-              <p className="flex-auto mt-2 pr-20 md:pr-20 lg:pr-40 lx:pr-60 text-xs leading-5 text-gray-500">
+              <div className="flex-auto mt-2 pr-20 md:pr-20 lg:pr-40 lx:pr-60 text-xs leading-5 text-gray-500">
                 <div className="font-bold text-sm text-gray-50">{activityItem.history.name}</div> 
                 <div className="font-medium italic text-gray-200">{activityItem.history.description}</div> 
                 {activityItem.history.note && <div className="font-medium italic text-gray-200">{activityItem.history.note}</div>}
-              </p>
+              </div>
               <time className="flex-none py-0.5 text-xs leading-5 text-gray-500">
                 {activityItem.date}
               </time>
