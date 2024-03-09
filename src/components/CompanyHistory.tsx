@@ -91,7 +91,9 @@ export function CompanyHistory() {
           </h1>
         </div>
 
-        <ul role="list" className="mt-12 mx-10 md:mx-20 lg:mx-40 xl:w-1/2 xl:mx-auto space-y-6">
+        <div className='flex justify-end mr-0 md:ml-[30%] xl:ml-[50%]'>
+        {/* <ul role="list" className="mt-12 mx-10 md:mx-20 lg:mx-40 xl:w-1/2 xl:mx-auto space-y-6"> */}
+        <ul role="list" className="mt-12 space-y-6">
           {activity.map((activityItem, activityItemIdx) => (
             <li key={activityItem.id} className="relative flex gap-x-4">
               <div className="mt-1 text-ainblue-600 text-lg font-bold" 
@@ -128,6 +130,7 @@ export function CompanyHistory() {
             </li>
           ))}
         </ul>
+        </div>
       </Container>
     </section>
   )
