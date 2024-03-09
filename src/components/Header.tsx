@@ -54,7 +54,7 @@ export function Header() {
   return (
     <header>
       <nav>
-        <Container className="relative z-50 flex justify-between py-8 bg-ainbg-primary">
+        <Container className="z-50 fixed w-full flex justify-between py-8 bg-ainbg-primary">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
               <Logo className="h-6 w-auto" />
@@ -104,19 +104,19 @@ export function Header() {
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#services">
-                              서비스소개
+                              서비스
                             </MobileNavLink>
                             <MobileNavLink href="/#about-company">
-                              회사소개
+                              회사
                             </MobileNavLink>
                             <MobileNavLink href="/#ceo-message">
                               대표인사
                             </MobileNavLink>
                             <MobileNavLink href="/#company-history">
-                              회사연혁
+                              연혁
                             </MobileNavLink>
                             <MobileNavLink href="/#docs">
-                              매뉴얼/논문
+                              논문
                             </MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
