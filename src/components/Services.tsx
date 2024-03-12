@@ -27,7 +27,7 @@ import {
   TupleLogo,
 } from '@/components/StockLogos'
 import Image from 'next/image'
-import aicitiImage from '@/images/product/product-main.png'
+import aicitiImage from '@/images/services/service-main.png'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -428,7 +428,7 @@ function FeaturesDesktop() {
       onChange={onChange}
       vertical
     >
-      <Tab.List className="relative z-10 order-last col-span-6 space-y-6">
+      <Tab.List className="relative z-10 order-first col-span-6 space-y-6">
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
@@ -441,8 +441,8 @@ function FeaturesDesktop() {
                 initial={{ borderRadius: 16 }}
               />
             )}
-            <div className="relative z-10 p-8">
-              <feature.icon className="h-8 w-8" />
+            <div className="relative z-10 p-1">
+              {/* <feature.icon className="h-8 w-8" /> */}
               <h3 className="mt-6 text-lg font-semibold text-white">
                 <Tab className="text-left ui-not-focus-visible:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
@@ -460,9 +460,9 @@ function FeaturesDesktop() {
         {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <CircleBackground color="#13B5C8" className="animate-spin-slower" />
         </div> */}
-        <div className="z-10 mx-auto w-[30rem] justify-center">
+        <div className="z-10 mx-auto w-full justify-center">
           <Image
-            className="w-auto"
+            className="w-full"
             src={aicitiImage}
             alt={""}
             priority={true}

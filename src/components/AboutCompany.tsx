@@ -22,7 +22,7 @@ export function AboutCompany() {
   return (
     <section
       id="about-company"
-      className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-primary"
+      className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-secondary"
     >
       {/* <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground color="#fff" className="animate-spin-slower" />

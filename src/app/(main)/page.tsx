@@ -1,10 +1,8 @@
-import { Welcome } from '@/components/Welcome'
 import { Hero } from '@/components/Hero'
 import { Services } from '@/components/Services'
 import { ServiceMaterials } from '@/components/ServiceMaterials'
 import { CeoMessage } from '../../components/CeoMessage'
 import { Docs } from '../../components/Docs'
-import { Modal } from '../../components/Modal'
 import { CompanyHistory } from '../../components/CompanyHistory'
 import { AboutCompany } from '../../components/AboutCompany'
 
@@ -43,7 +41,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <ServiceMaterials />
+      {/* <ServiceMaterials /> */}
       <AboutCompany />
       <CeoMessage />
       <CompanyHistory />

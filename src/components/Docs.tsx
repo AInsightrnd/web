@@ -11,7 +11,7 @@ export function Docs() {
   return (
     <section
       id="docs"
-      className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-secondary"
+      className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-primary"
     >
       {/* <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
         <CircleBackground color="#fff" className="animate-spin-slower" />
