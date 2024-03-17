@@ -598,16 +598,12 @@ export function Services() {
       <Container>
         <div className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
-            서비스소개
+            AICiTi
           </h1>
           <p className="mt-4 text-lg text-gray-200">
-            Our program automatically detects landmarks and analyzes dental parameters 
-            extracted from the landmarks to output necessary for orthodontic diagnosis parameters 
-            using deep learning models on CBCT images for dentists and plastic surgeons especially for orthodontists,
-            and displays the result landmarks and diagnostic parameters 
-            as auxiliary overlayed drawings on top of the original image to efficiently visualize the necessary info for the patient. 
-            Each landmark can be also modified manually one by one to generate human extracted parameters 
-            as the counterpart for the AI generated ones for error corrections, comparison or any other purposes.
+            AICiTi 아이씨티 프로그램은 치과용 CBCT(Cone Beam Computed Tomography)
+            영상에서 딥러닝 모델을 이용해 치아 교정 진단에 필요한 랜드마크를
+            자동 검출, 분석을 제공합니다.
           </p>
         </div>
       </Container>

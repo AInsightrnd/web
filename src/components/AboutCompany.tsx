@@ -33,10 +33,10 @@ export function AboutCompany() {
             Get your first actions
           </h1>
 
-          <p className="mt-4 text-lg text-gray-200">
+          {/* <p className="mt-4 text-lg text-gray-200">
             Revolutionizing dental care through cutting-edge AI technology,
             our company offers an advanced diagnosis solution that transforms the landscape of dental healthcare.
-          </p>
+          </p> */}
         </div>
         <div className="mt-12 w-full flex">
           <ReactPlayer url='https://youtu.be/6Y7EMllUPQI' light={true} width='50%' />
