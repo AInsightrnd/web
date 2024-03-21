@@ -465,7 +465,7 @@ function FeaturesDesktop() {
             className="w-full"
             src={aicitiImage}
             alt={""}
-            priority={true}
+            // priority={true}
           />
         </div>
         {/* <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
@@ -593,7 +593,7 @@ export function Services() {
     <section
       id="services"
       aria-label="Features for investing all your money"
-      className="py-20 sm:py-32 bg-ainbg-primary"
+      className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
         <div className="mx-auto max-w-3xl lg:mx-0">

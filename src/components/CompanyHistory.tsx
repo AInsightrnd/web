@@ -82,7 +82,7 @@ export function CompanyHistory() {
     <section
       id="company-history"
       aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32 bg-ainbg-secondary"
+      className="py-20 sm:py-32 bg-ainbg-primary"
     >
       <Container>
         <div className="mx-auto max-w-3xl lg:mx-0">
