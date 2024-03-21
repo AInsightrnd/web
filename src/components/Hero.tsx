@@ -21,6 +21,7 @@ import heroImage from '@/images/hero/ai-teeth.jpeg'
 import heroExImage from '@/images/hero/ex.gif'
 import { CircleBackground } from './CircleBackground'
 import { Modal } from './Modal'
+import { Alerts } from './Alerts'
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   let id = useId()
@@ -134,17 +135,19 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               {/* <AppStoreLink /> */}
               <Button
-                href="/#services"
+                // href="/#services"
                 variant="solid"
                 color='cyan'
+                onClick={() => Alerts({type:'ok', title: '준비중입니다.', descriptions: ['']})}
               >
                 {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
                 <span className="ml-0">Web AICiTi</span>
               </Button>
               <Button
-                href="/#docs"
+                // href="/#docs"
                 variant="outline"
                 color='cyan'
+                onClick={() => Alerts({type:'ok', title: '준비중입니다.', descriptions: ['']})}
               >
                 {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
                 <span className="ml-0 text-ainblue-600">Manual</span>
