@@ -85,7 +85,7 @@ export function CompanyHistory() {
       className="py-20 sm:py-32 bg-ainbg-primary"
     >
       <Container>
-        <div className="mx-auto max-w-3xl lg:mx-0">
+        <div className="max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             회사연혁
           </h1>
@@ -96,8 +96,7 @@ export function CompanyHistory() {
         <ul role="list" className="mt-12 space-y-6">
           {activity.map((activityItem, activityItemIdx) => (
             <li key={activityItem.id} className="relative flex gap-x-4">
-              <div className="mt-1 text-ainblue-600 text-lg font-bold" 
-              >
+              <div className="mt-1 text-ainblue-600 text-lg font-bold">
                 {activityItem.type === 'new-year' ?
                   <p className='ml-2.5'>{activityItem.date.split('-')[0]}</p> :
                   <p className='ml-14' />

@@ -28,7 +28,7 @@ export function AboutCompany() {
         <CircleBackground color="#fff" className="animate-spin-slower" />
       </div> */}
       <Container>
-        <div className="mx-auto max-w-3xl lg:mx-0">
+        <div className="max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             Get your first actions
           </h1>

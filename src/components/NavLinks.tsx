@@ -9,11 +9,11 @@ export function NavLinks({dark}: {dark?: boolean}) {
   let timeoutRef = useRef<number | null>(null)
 
   return [
-    ['서비스', '/#services'],
-    ['회사', '/#about-company'],
-    ['대표인사', '/#ceo-message'],
-    ['연혁', '/#company-history'],
-    ['논문', '/#docs'],
+    ['Product', '/#services'],
+    ['About us', '/#about-company'],
+    // ['대표인사', '/#ceo-message'],
+    // ['연혁', '/#company-history'],
+    // ['논문', '/#docs'],
   ].map(([label, href], index) => (
     <Link
       key={label}

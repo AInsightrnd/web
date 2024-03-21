@@ -596,7 +596,7 @@ export function Services() {
       className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
-        <div className="mx-auto max-w-3xl lg:mx-0">
+        <div className="max-w-3xl mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             AICiTi
           </h1>

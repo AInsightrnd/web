@@ -11,7 +11,7 @@ export function CeoMessage() {
       className="py-20 sm:py-32 bg-ainbg-secondary"
     >
       <Container>
-        <div className="mx-auto max-w-3xl lg:mx-0">
+        <div className="max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             We are changing the way people smile
           </h1>
@@ -49,7 +49,7 @@ export function CeoMessage() {
               감사합니다.
             </p>
           </div>
-          <div className="relative col-span-12 md:col-span-6">
+          <div className="relative mt-12 col-span-12 md:col-span-6 flex items-center">
             <div className="z-10 mx-auto w-full justify-center">
               <Image
                 className="w-full"

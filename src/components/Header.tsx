@@ -104,12 +104,12 @@ export function Header() {
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#services">
-                              서비스
+                              Product
                             </MobileNavLink>
                             <MobileNavLink href="/#about-company">
-                              회사
+                              About us
                             </MobileNavLink>
-                            <MobileNavLink href="/#ceo-message">
+                            {/* <MobileNavLink href="/#ceo-message">
                               대표인사
                             </MobileNavLink>
                             <MobileNavLink href="/#company-history">
@@ -117,7 +117,7 @@ export function Header() {
                             </MobileNavLink>
                             <MobileNavLink href="/#docs">
                               논문
-                            </MobileNavLink>
+                            </MobileNavLink> */}
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             <Button href="/login" variant="outline" color='cyan'>
