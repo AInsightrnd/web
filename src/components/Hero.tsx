@@ -106,7 +106,8 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function Hero() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
   useEffect(() => {
     setShowModal(true)
   }, [])
@@ -114,47 +115,50 @@ export function Hero() {
   return (
     <>
       {showModal && <Modal onClose={setShowModal} />}
-        <Container className="w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
-          <video
-            loop
-            autoPlay
-            muted
-            id="bg-video"
-            className="min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      
+      {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>}
+
+      <Container className="w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
+        <video
+          loop
+          autoPlay
+          muted
+          id="bg-video"
+          className="min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+          <source
+            src='/main-bg-8sec.mp4'
+            type="video/mp4"
+            />
+        </video>
+        <div className="absolute top-1/2 transform -translate-y-1/2 text-white">
+          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
+            NHP CBCT AI Diagnosis
+          </h1>
+          {/* <p className="text-lg md:text-xl lg:text-2xl">Your centered text message goes here.</p> */}
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+            {/* <AppStoreLink /> */}
+            <Button
+              // href="/#services"
+              variant="solid"
+              color='cyan'
+              onClick={() => setShowAlert(true)}
             >
-            <source
-              src='/main-bg-8sec.mp4'
-              type="video/mp4"
-              />
-          </video>
-          <div className="absolute top-1/2 transform -translate-y-1/2 text-white">
-            <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
-              NHP CBCT AI Diagnosis
-            </h1>
-            {/* <p className="text-lg md:text-xl lg:text-2xl">Your centered text message goes here.</p> */}
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              {/* <AppStoreLink /> */}
-              <Button
-                // href="/#services"
-                variant="solid"
-                color='cyan'
-                onClick={() => Alerts({type:'ok', title: '준비중입니다.', descriptions: ['']})}
-              >
-                {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-                <span className="ml-0">Web AICiTi</span>
-              </Button>
-              <Button
-                // href="/#docs"
-                variant="outline"
-                color='cyan'
-                onClick={() => Alerts({type:'ok', title: '준비중입니다.', descriptions: ['']})}
-              >
-                {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-                <span className="ml-0 text-ainblue-600">Manual</span>
-              </Button>
-            </div>
+              {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+              <span className="ml-0">Web AICiTi</span>
+            </Button>
+            <Button
+              // href="/#docs"
+              variant="outline"
+              color='cyan'
+              onClick={() => setShowAlert(true)}
+            >
+              {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
+              <span className="ml-0 text-ainblue-600">Manual</span>
+            </Button>
           </div>
-        </Container>
+        </div>
+      </Container>
     </>
   )
 }

@@ -1,18 +1,19 @@
-import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
-import modalImage from '@/images/hero/modal_s_0308.png'
-import Image from "next/image"
 import { CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, XCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
 export function Alerts({
   type,
   title,
   descriptions,
+  action,
 }: {
   type: string
   title: string
   descriptions: string[]
+  action: Dispatch<SetStateAction<boolean>>
 }) {
+
+  console.log('>>>> ', type, title, descriptions)
 
   function warnWithDescription() {
     return (
@@ -79,6 +80,7 @@ export function Alerts({
                 <button
                   type="button"
                   className="ml-3 rounded-md bg-green-50 px-2 py-1.5 text-sm font-medium text-green-800 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50"
+                  onClick={() => action(false)}
                 >
                   Dismiss
                 </button>
@@ -138,6 +140,7 @@ export function Alerts({
   }
 
   function renderAlert() {
+    console.log('>>>> ', type, title, descriptions)
     if (type === 'warn') {
       return warnWithDescription()
     } else if (type === 'error') {
