@@ -17,11 +17,11 @@ import logoForbes from '@/images/logos/forbes.svg'
 import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
-import heroImage from '@/images/hero/ai-teeth.jpeg'
 import heroExImage from '@/images/hero/ex.gif'
 import { CircleBackground } from './CircleBackground'
 import { Modal } from './Modal'
 import { Alerts } from './Alerts'
+import heroImage from '@/images/hero/ex.gif'
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   let id = useId()
@@ -124,14 +124,14 @@ export function Hero() {
           autoPlay
           muted
           id="bg-video"
-          className="min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="hidden md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
           <source
             src='/main-bg-8sec.mp4'
             type="video/mp4"
             />
         </video>
-        <div className="absolute top-1/2 transform -translate-y-1/2 text-white">
+        <div className="absolute top-0 mt-[50%] md:top-1/2 md:mt-0 transform -translate-y-1/2 text-white">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
             NHP CBCT AI Diagnosis
           </h1>
@@ -157,6 +157,13 @@ export function Hero() {
               <span className="ml-0 text-ainblue-600">Manual</span>
             </Button>
           </div>
+        </div>
+        <div className="md:hidden mt-[80%]">
+          <Image
+            className="w-full"
+            src={heroImage}
+            alt={""}
+          />  
         </div>
       </Container>
     </>
