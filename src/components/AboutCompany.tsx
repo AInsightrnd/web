@@ -39,8 +39,11 @@ export function AboutCompany() {
           </p> */}
         </div>
         <div className="mt-12 w-full flex">
-          <ReactPlayer url='https://youtu.be/6Y7EMllUPQI' light={true} width='50%' />
-          <ReactPlayer url='https://youtu.be/43SKuWEacM4' light={true} width='50%' />
+          <ReactPlayer url='https://youtu.be/ZKjW-JfD0TA' light={true} width='100%' />
+          </div>
+        <div className="mt-12 w-full flex">
+          <ReactPlayer url='https://youtu.be/wpP0osRec6c' light={true} width='50%' />
+          <ReactPlayer url='https://youtu.be/cqvdTNpLYyA' light={true} width='50%' />
         </div>
       </Container>
     </section>
