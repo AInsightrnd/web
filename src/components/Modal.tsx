@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
-import modalImage from '@/images/hero/modal_s_0308.png'
+import modalImage from '@/images/hero/modal.png'
 import Image from "next/image"
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
