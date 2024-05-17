@@ -1,10 +1,5 @@
 import { Hero } from '@/components/Hero'
-import { Services } from '@/components/Services'
-import { ServiceMaterials } from '@/components/ServiceMaterials'
-import { CeoMessage } from '../../components/CeoMessage'
-import { Docs } from '../../components/Docs'
-import { CompanyHistory } from '../../components/CompanyHistory'
-import { AboutCompany } from '../../components/AboutCompany'
+
 
 export default function Home() {
 
@@ -40,12 +35,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      {/* <ServiceMaterials /> */}
-      <AboutCompany />
-      <CeoMessage />
-      <CompanyHistory />
-      <Docs />
+   
     </>
   )
 }

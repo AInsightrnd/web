@@ -103,11 +103,28 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-ainbg-primary px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#services">
-                              Product
-                            </MobileNavLink>
-                            <MobileNavLink href="/#about-company">
+                            <MobileNavLink href="/about">
                               About us
+                            </MobileNavLink>
+                            <MobileNavLink href="/programs">
+                              Programs
+                            </MobileNavLink>
+
+                            <MobileNavLink href="/manualt">
+                              매뉴얼
+                            </MobileNavLink>
+
+                            <MobileNavLink href="/paper">
+                              논문
+                            </MobileNavLink>
+
+                            
+                            <MobileNavLink href="/cbct">
+                              CBCT 촬영법
+                            </MobileNavLink>
+
+                            <MobileNavLink href="/contact">
+                              Contact
                             </MobileNavLink>
                             {/* <MobileNavLink href="/#ceo-message">
                               대표인사

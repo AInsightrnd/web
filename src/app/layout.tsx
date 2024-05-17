@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: '%s - AInsight',
-    default: 'AInsight - change the way people smile',
+    default: 'AInsight - AI dental solution software',
   },
   description:
     'By revolutionizing the clinical process by significantly shortening the time required for orthodontic assessments',
