@@ -118,7 +118,7 @@ export function Hero() {
       
       {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>}
 
-      <Container className="w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
+      <Container className="flex-grow w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
         <video
           loop
           autoPlay

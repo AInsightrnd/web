@@ -4,9 +4,9 @@ import { Header } from '@/components/Header'
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-    <div className="flex flex-col ">
+    <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="relative bg-ainbg-secondary">{children}</main>
+      <main className="bg-ainbg-secondary flex-grow">{children}</main>
 
       <Footer />
       </div>
