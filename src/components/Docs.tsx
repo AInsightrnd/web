@@ -1,5 +1,4 @@
-import { AppStoreLink } from '@/components/AppStoreLink'
-import { CircleBackground } from '@/components/CircleBackground'
+
 import { Container } from '@/components/Container'
 import Image from 'next/image'
 import patentImage from '@/images/company/patent.png'
@@ -13,13 +12,10 @@ export function Docs() {
       id="docs"
       className="relative overflow-hidden py-20 sm:py-32 bg-ainbg-secondary"
     >
-      {/* <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
-        <CircleBackground color="#fff" className="animate-spin-slower" />
-      </div> */}
       <Container>
         <div className="max-w-3xl lg:mx-0">
           <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
-            매뉴얼/논문
+          사용 매뉴얼
           </h1>
         </div>
         
@@ -41,6 +37,10 @@ export function Docs() {
           />
         </div>
       </Container>
-    </section>
+      </section>
+
+
+    
   )
+  
 }
