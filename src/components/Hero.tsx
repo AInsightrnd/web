@@ -106,15 +106,10 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function Hero() {
-  const [showModal, setShowModal] = useState(false)
   const [showAlert, setShowAlert] = useState(false)
-  useEffect(() => {
-    setShowModal(true)
-  }, [])
 
   return (
     <>
-      {showModal && <Modal onClose={setShowModal} />}
       
       {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>}
 
