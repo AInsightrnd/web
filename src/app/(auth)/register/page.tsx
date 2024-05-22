@@ -25,26 +25,28 @@ export default function Register() {
     >
       <form>
         <div className="grid grid-cols-2 gap-6">
-          <TextField
-            label="First name"
-            name="first_name"
-            type="text"
-            autoComplete="given-name"
-            required
-          />
-          <TextField
-            label="Last name"
+        <TextField
             name="last_name"
             type="text"
             autoComplete="family-name"
+            placeholder="성"
             required
           />
+          <TextField
+            name="first_name"
+            type="text"
+            autoComplete="given-name"
+            placeholder="이름"
+            required
+          />
+    
           <TextField
             className="col-span-full"
             label="Email address"
             name="email"
             type="email"
             autoComplete="email"
+            placeholder="이메일 주소 입력"
             required
           />
           <TextField
@@ -53,6 +55,7 @@ export default function Register() {
             name="password"
             type="password"
             autoComplete="new-password"
+            placeholder="비밀번호 입력"
             required
           />
           <SelectField
@@ -67,7 +70,7 @@ export default function Register() {
           </SelectField>
         </div>
         <Button type="submit" color="cyan" className="mt-8 w-full">
-          Get started today
+          가입하기
         </Button>
       </form>
     </AuthLayout>
