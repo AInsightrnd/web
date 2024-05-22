@@ -19,7 +19,6 @@ import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
 import heroExImage from '@/images/hero/ex.gif'
 import { CircleBackground } from './CircleBackground'
-import { Modal } from './Modal'
 import { Alerts } from './Alerts'
 import heroImage from '@/images/hero/ex.gif'
 
