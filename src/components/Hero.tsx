@@ -142,15 +142,17 @@ export function Hero() {
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
               <span className="ml-0">Web AICiTi</span>
             </Button>
-            <Button
+            
+           {/* <Button
               // href="/#docs"
               variant="outline"
               color='cyan'
               onClick={() => setShowAlert(true)}
-            >
+            >*/}
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-              <span className="ml-0 text-ainblue-600">Manual</span>
-            </Button>
+              {/*<span className="ml-0 text-ainblue-600">Manual</span>*/}
+           {/* </Button>*/}
+
           </div>
         </div>
         <div className="md:hidden mt-[80%]">
