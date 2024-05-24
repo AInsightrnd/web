@@ -4,22 +4,10 @@ import { useEffect, useId, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import { AppDemo } from '@/components/AppDemo'
-import { AppStoreLink } from '@/components/AppStoreLink'
+
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { PhoneFrame } from '@/components/PhoneFrame'
-import logoBbc from '@/images/logos/bbc.svg'
-import logoCbs from '@/images/logos/cbs.svg'
-import logoCnn from '@/images/logos/cnn.svg'
-import logoFastCompany from '@/images/logos/fast-company.svg'
-import logoForbes from '@/images/logos/forbes.svg'
-import logoHuffpost from '@/images/logos/huffpost.svg'
-import logoTechcrunch from '@/images/logos/techcrunch.svg'
-import logoWired from '@/images/logos/wired.svg'
 import heroExImage from '@/images/hero/ex.gif'
-import { CircleBackground } from './CircleBackground'
-import { Modal } from './Modal'
 import { Alerts } from './Alerts'
 import heroImage from '@/images/hero/ex.gif'
 
@@ -142,15 +130,17 @@ export function Hero() {
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
               <span className="ml-0">Web AICiTi</span>
             </Button>
-            <Button
+
+           {/* <Button
               // href="/#docs"
               variant="outline"
               color='cyan'
               onClick={() => setShowAlert(true)}
-            >
+            >*/}
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-              <span className="ml-0 text-ainblue-600">Manual</span>
-            </Button>
+              {/*<span className="ml-0 text-ainblue-600">Manual</span>*/}
+           {/* </Button>*/}
+
           </div>
         </div>
         <div className="md:hidden mt-[80%]">
