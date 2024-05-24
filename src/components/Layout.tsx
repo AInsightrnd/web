@@ -6,7 +6,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <>
     <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="bg-ainbg-secondary flex-grow">{children}</main>
+      <main className="bg-ainbg-primary flex-grow">{children}</main>
 
       <Footer />
       </div>
