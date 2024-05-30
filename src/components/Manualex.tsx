@@ -32,13 +32,13 @@ export function Manualex() {
               </h1>
     
              <a href="https://drive.google.com/file/d/11z52-a7r12vix5AxDGq3ToyzJpp0Nv3i/view?usp=sharing"  
-            target='_blank' className="text-gray-200 lg:mx-0 underline py-2">
+            target='_blank' className="text-ainblue-600 lg:mx-0 underline py-2">
             다운로드</a>
     
             </div>
     
     
-            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 ">
+            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 max-w-fit max-h-144 p-2">
 
               <ReactPlayer 
                   className="w-full h-full object-cover "
