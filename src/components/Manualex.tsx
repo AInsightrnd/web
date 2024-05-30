@@ -23,7 +23,8 @@ export function Manualex() {
     <>
     <section
         id="Manualex"
-        className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-3 lg:max-w-full"
+        className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-8 
+        gap-y-16 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-3 lg:max-w-full min-h-96 max-h-screen"
         >
 
       <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4">
