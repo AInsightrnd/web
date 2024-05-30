@@ -69,6 +69,22 @@ export default function Register() {
             <option>The “Never Use This” podcast</option>
           </SelectField>
         </div>
+      
+        <div className="mt-6 space-y-6">
+           <div className="relative flex gap-x-4">
+             <div className="flex h-6 items-center text-sm font-semibold text-gray-700">
+                <input
+                    id="agree"
+                    name="agree"
+                    type="checkbox"
+                    className="h-4 w-4 mx-1 rounded border-ainblue-900 text-indigo-600 focus:ring-indigo-600 text-gray-700"
+                    />     
+                    I accept the <a className="mx-1 text-ainblue-900 hover:underline dark:text-primary-500" href="#"> Terms and Conditions</a>
+                      </div>
+                      </div>
+                      </div>
+
+
         <Button type="submit" color="cyan" className="mt-8 w-full">
           가입하기
         </Button>
