@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Login() {
   return (
     <AuthLayout
-      title="Sign in to account"
+      title="로그인"
       subtitle={
         <>
           Don’t have an account?{' '}

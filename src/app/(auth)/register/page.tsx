@@ -6,13 +6,13 @@ import { SelectField, TextField } from '@/components/Fields'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sign Up',
+  title: '회원가입',
 }
 
 export default function Register() {
   return (
     <AuthLayout
-      title="Sign up for an account"
+      title="회원가입"
       subtitle={
         <>
           Already registered?{' '}
@@ -24,9 +24,10 @@ export default function Register() {
       }
     >
       <form>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3">
         <TextField
             name="last_name"
+            label="성 *"
             type="text"
             autoComplete="family-name"
             placeholder="성"
@@ -35,6 +36,7 @@ export default function Register() {
           <TextField
             name="first_name"
             type="text"
+            label="이름 *"
             autoComplete="given-name"
             placeholder="이름"
             required
@@ -42,7 +44,7 @@ export default function Register() {
     
           <TextField
             className="col-span-full"
-            label="Email address"
+            label="이메일 *"
             name="email"
             type="email"
             autoComplete="email"
@@ -51,7 +53,7 @@ export default function Register() {
           />
           <TextField
             className="col-span-full"
-            label="Password"
+            label="비밀번호 *"
             name="password"
             type="password"
             autoComplete="new-password"
@@ -68,7 +70,21 @@ export default function Register() {
             <option>Our route 34 city bus ad</option>
             <option>The “Never Use This” podcast</option>
           </SelectField>
+          </div>
+
+          <div className="grid grid-cols-2 mt-8 gap-2">
+          <h2 className="text-base font-semibold leading-7 text-ainblue-800">정보 입력</h2>
+          <TextField
+            className="col-span-full"
+            name="hospital"
+            type="hospital"
+            placeholder="병원명"
+            required
+          />
+
         </div>
+
+        
       
         <div className="mt-6 space-y-6">
            <div className="relative flex gap-x-4">
