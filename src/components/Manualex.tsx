@@ -38,7 +38,8 @@ export function Manualex() {
             </div>
     
     
-            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 max-w-fit max-h-144 p-2">
+            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex 
+            justify-center rounded-lg bg-gray-800 max-w-fit max-h-144 p-2">
 
               <ReactPlayer 
                   className="w-full h-full object-cover "
