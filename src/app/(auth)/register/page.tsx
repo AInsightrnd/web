@@ -24,35 +24,39 @@ export default function Register() {
       }
     >
       <form>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-x-2 gap-y-4">
           <TextField
-            label="First name"
-            name="first_name"
+            name="last_name"
+            label="성 *"
             type="text"
-            autoComplete="given-name"
+            autoComplete="family-name"
+            placeholder="성"
             required
           />
           <TextField
-            label="Last name"
-            name="last_name"
+            name="first_name"
             type="text"
-            autoComplete="family-name"
+            label="이름 *"
+            autoComplete="given-name"
+            placeholder="이름"
             required
           />
           <TextField
             className="col-span-full"
-            label="Email address"
+            label="이메일 *"
             name="email"
             type="email"
             autoComplete="email"
+            placeholder="이메일 주소 입력"
             required
           />
           <TextField
             className="col-span-full"
-            label="Password"
+            label="비밀번호 *"
             name="password"
             type="password"
             autoComplete="new-password"
+            placeholder="비밀번호 입력"
             required
           />
           <SelectField
@@ -66,8 +70,8 @@ export default function Register() {
             <option>The “Never Use This” podcast</option>
           </SelectField>
         </div>
-        <Button type="submit" color="cyan" className="mt-8 w-full">
-          Get started today
+        <Button type="submit" color="cyan" className="mt-10 w-full">
+        가입하기
         </Button>
       </form>
     </AuthLayout>
