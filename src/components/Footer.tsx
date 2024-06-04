@@ -20,20 +20,20 @@ export function Footer() {
       <Container>
         <div className="md:flex items-start justify-between gap-y-10 pb-6 pt-12 lg:flex-row lg:items-center lg:py-8">
           <div className="mb-6 md:mb-0">
-            <div className="flex items-center text-gray-900">
+            <div className="flex items-center text-gray-700">
               <LogoFooter className="h-6 w-auto" />
-              <div className="ml-4">
+              <div className="ml-6">
                 <p className="text-base font-semibold">AInsight Co. Ltd.</p>
                 <p className="mt-0 text-sm">AI dental solution software</p>
               </div>
             </div>
 
           </div>
-          <div className="text-gray-900">
-            <div className="text-base font-semibold">대표자: 안장훈</div>
-            <div className="mt-0 text-sm">사업자등록번호: 658-86-01914</div>
-            <div className="mt-0 text-sm">전화: 02 2677-3579 이메일 admin@ainsightortho.com</div>
-            <div className="mt-0 text-sm">본사: 서울특별시 구로구 경인로 661, 104동 1112호 (신도림푸르지오1차)</div>
+          <div className="text-gray-600 text-left">
+            <div className="text-sm font-semibold">대표자: 안장훈</div>
+            <div className="mt-1 text-xs text-gray-500">사업자등록번호: 658-86-01914</div>
+            <div className="mt-0.5 text-xs text-gray-500">전화: 02 2677-3579 　이메일 admin@ainsightortho.com</div>
+            <div className="mt-0.5 text-xs text-gray-500">본사: 서울특별시 구로구 경인로 661, 104동 1112호</div>
           </div>
         </div>
       </Container>
