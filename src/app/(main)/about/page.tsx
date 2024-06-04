@@ -19,9 +19,9 @@ export default function about() {
         </div>
 
 
-        <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 ">
+        <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 max-w-4xl ">
         <div className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0">
-        <div className="overscroll-y-contain overflow-auto aspect-w-2 p-4">
+        <div className="overscroll-y-contain overflow-auto aspect-w-2 p-4 ">
           <p className="text-gray-200">
             안녕하십니까?<br /><br />
             주식회사 아인사이트 대표 안장훈입니다.
