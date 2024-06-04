@@ -7,9 +7,8 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import heroExImage from '@/images/hero/ex.gif'
 import { Alerts } from './Alerts'
-import heroImage from '@/images/hero/ex.gif'
+
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   let id = useId()
@@ -107,7 +106,7 @@ export function Hero() {
           autoPlay
           muted
           id="bg-video"
-          className="hidden md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:object-none"
           >
           <source
             src='/main-bg-8sec.mp4'
@@ -134,13 +133,7 @@ export function Hero() {
 
           </div>
         </div>
-        <div className="md:hidden mt-[80%]">
-          <Image
-            className="w-full"
-            src={heroImage}
-            alt={""}
-          />  
-        </div>
+       
       </Container>
     </>
   )
