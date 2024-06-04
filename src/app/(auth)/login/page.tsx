@@ -42,7 +42,7 @@ export default function Login() {
             required
           />
         </div>
-        <Button type="submit" color="cyan" className="py-3 mt-8 w-full">
+        <Button type="submit" color="cyan" className="py-3 mt-10 w-full">
           Sign in to account
         </Button>
       </form>
