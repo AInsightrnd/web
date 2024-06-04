@@ -24,27 +24,29 @@ export function Paper() {
     <>
     <section
         id="paper"
-        className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-3 lg:max-w-max"
-      >
+        className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-3 lg:max-w-full"
+        >
     
-      <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4">
+    
+    <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4">
               <h1 className="text-3xl font-bold tracking-tight text-gray-50">
               논문
               </h1>
     
-                <p className=" text-base font-medium text-gray-100">
+                <p className=" text-base font-medium text-gray-100 lg:max-w-sm">
                 Automated Analysis of Three-dimensional CBCT Images Taken in Natural Head Position That Combines Facial Pro
                 </p>
     
     
     
-              <a href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"  target='_blank' className="text-gray-200 lg:mx-0 underline py-2">
+              <a href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"target='_blank' className="text-ainblue-600 lg:mx-0 underline py-2">
                 다운로드</a>
     
             </div>
     
     
-            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 ">
+            <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center 
+            rounded-lg bg-gray-800 max-w-fit max-h-full p-4">
             <div className="overscroll-y-contain overflow-auto aspect-w-2 ">
             <div className="z-10 mx-5 w-full max-w-md ">
     
