@@ -24,23 +24,25 @@ export default function Login() {
       }
     >
       <form>
-        <div className="space-y-6">
+        <div className="space-y-4">
           <TextField
             label="Email address"
             name="email"
             type="email"
             autoComplete="email"
             required
+            placeholder="이메일"
           />
           <TextField
             label="Password"
             name="password"
             type="password"
             autoComplete="current-password"
+            placeholder="비밀번호"
             required
           />
         </div>
-        <Button type="submit" color="cyan" className="mt-8 w-full">
+        <Button type="submit" color="cyan" className="py-3 mt-8 w-full">
           Sign in to account
         </Button>
       </form>
