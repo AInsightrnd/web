@@ -8,7 +8,7 @@ function Label({ id, children }: { id: string; children: React.ReactNode }) {
   return (
     <label
       htmlFor={id}
-      className="mb-2 block text-sm font-semibold text-gray 700"
+      className="mb-1 block text-sm font-semibold text-gray-700"
     >
       {children}
     </label>
