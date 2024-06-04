@@ -106,7 +106,7 @@ export function Hero() {
           autoPlay
           muted
           id="bg-video"
-          className="md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:object-none"
+          className="md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
           <source
             src='/main-bg-8sec.mp4'
