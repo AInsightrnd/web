@@ -16,7 +16,7 @@ function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Footer() {
   return (
-    <footer className=" border-t border-gray-200  bg-grey-100 inset-x-0 bottom-0">
+    <footer className=" border-t border-gray-200  bg-gray-100 inset-x-0 bottom-0">
       <Container>
         <div className="md:flex items-start justify-between gap-y-10 pb-4 pt-6 lg:flex-row lg:items-start lg:py-6">
           <div className="mb-6 md:mb-0">
