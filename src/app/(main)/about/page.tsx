@@ -9,7 +9,7 @@ export default function about() {
   return (
     <section
     id="about"
-    className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-3 lg:max-w-full"
+    className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-2 gap-y-16 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-3 lg:max-w-full"
   >
 
   <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4">
@@ -21,8 +21,8 @@ export default function about() {
 
         <div className="sm:col-span-full lg:col-span-2 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 max-w-5xl ">
         <div className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0">
-        <div className="overscroll-y-contain overflow-auto aspect-w-2 p-4 ">
-          <p className="text-gray-200">
+        <div className="overscroll-y-contain overflow-auto aspect-w-2 p-4 md:w-60 lg:w-big">
+          <p className="text-gray-200 break-keep">
             안녕하십니까?<br /><br />
             주식회사 아인사이트 대표 안장훈입니다.
             여러 선생님들께 저희 회사를 소개하게 되어 대표로서 무척 기쁩니다.
