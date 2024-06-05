@@ -61,13 +61,13 @@ export default function Register() {
           />
           <SelectField
             className="col-span-full"
-            label="How did you hear about us?"
+            label="가입 경로"
             name="referral_source"
           >
-            <option>AltaVista search</option>
-            <option>Super Bowl commercial</option>
-            <option>Our route 34 city bus ad</option>
-            <option>The “Never Use This” podcast</option>
+            <option>SIDEX 시덱스</option>
+            <option>오프라인 광고</option>
+            <option>인터넷</option>
+            <option>기타</option>
           </SelectField>
         </div>
         <Button type="submit" color="cyan" className="mt-10 w-full">
