@@ -38,7 +38,8 @@ export function Paper() {
     
     
     
-              <a href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"  target='_blank' className="text-gray-200 lg:mx-0 underline py-2">
+              <a href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"  
+              target='_blank' className="text-ainblue-600 lg:mx-0 underline py-2">
                 다운로드</a>
     
             </div>
