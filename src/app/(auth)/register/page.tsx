@@ -5,6 +5,7 @@ import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
 import { type Metadata } from 'next'
 
+
 export const metadata: Metadata = {
   title: '회원가입',
 }
@@ -24,7 +25,7 @@ export default function Register() {
       }
     >
       <form>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-4">
         <TextField
             name="last_name"
             label="성 *"
@@ -92,8 +93,9 @@ export default function Register() {
                 <input
                     id="agree"
                     name="agree"
-                    type="checkbox"
-                    className="h-4 w-4 mx-1 rounded border-ainblue-900 text-indigo-600 focus:ring-indigo-600 text-gray-700"
+                    type="Checkbox"
+                     required
+                    className="h-4 w-4 mx-1 rounded  focus:ring-indigo-600 text-gray-700"
                     />     
                     I accept the <a className="mx-1 text-ainblue-900 hover:underline dark:text-primary-500" href="#"> Terms and Conditions</a>
                       </div>
