@@ -35,8 +35,9 @@ export function Services() {
           </p>
         </div>
 
-        <div className="sm:col-span-full  lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 flex justify-center rounded-lg bg-gray-800 max-w-4xl max-h-fit p-4">
-        <div className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0">
+        <div className="sm:col-span-full  lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 flex justify-center 
+        rounded-lg bg-gray-800 max-w-4xl max-h-fit p-4">
+        <div className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0 aspect-video">
           <Image
             className="w-auto h-auto object-cover "
             src={service}
