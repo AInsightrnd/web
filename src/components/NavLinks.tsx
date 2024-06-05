@@ -34,9 +34,9 @@ export function NavLinks({dark}: {dark?: boolean}) {
       label: 'Programs',
       dropdownItems: [
         { label: 'AICiTi', href: '/programs' },
-        { label: 'AI model', href: '/', disable: true },
-        { label: 'AI Planning', href: '/', disable: true },
-        { label: 'AI Simulator', href: '/', disable: true },
+        { label: 'AI model', disable: true },
+        { label: 'AI Planning',  disable: true },
+        { label: 'AI Simulator',  disable: true },
       ],
     },
     {
@@ -53,7 +53,7 @@ export function NavLinks({dark}: {dark?: boolean}) {
       label: 'Contact',
       dropdownItems: [
         { label: 'Contact Us', href: '/contact' },
-        { label: 'FAQ', href: '/', disable: true },
+        { label: 'FAQ', disable: true },
       ],
     },
   ];
@@ -99,9 +99,9 @@ export function NavLinks({dark}: {dark?: boolean}) {
                         <Link href={item.href || '#'}>
                           <div
                             className={`block px-4 py-2 ${
-                              item.disable ? 'text-gray-500' : 'text-gray-100'
+                              item.disable ? 'text-gray-500 cursor-default' : 'text-gray-100 '
                             } ${
-                              !item.disable ? 'hover:bg-ainblue-800' : ''
+                              !item.disable ? 'hover:bg-ainblue-800 ' : ''
                             }`}
                           >
                             {item.label}
