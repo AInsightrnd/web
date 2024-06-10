@@ -1,11 +1,8 @@
 import { Dispatch, SetStateAction } from "react"
 import { CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, XCircleIcon, XMarkIcon } from '@heroicons/react/20/solid'
 
-export function Alerts({
-  type,
-  title,
-  descriptions,
-  action,
+export function Alerts(p0: string, p1: string, p2: string[], {
+  type, title, descriptions, action,
 }: {
   type: string
   title: string

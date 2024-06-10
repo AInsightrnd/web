@@ -8,15 +8,23 @@ export async function createUser(
   const response = await fetch(`${baseUrl}/users`, {
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
+      'Accept': '*/*',
       'Content-Type': 'application/json',
+      'Connection': 'keep-alive'
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({
+      email: payload.email,
+      password: payload.password,
+      firstname: payload.firstname,
+      lastname: payload.lastname,
+    }),
   })
+
+  const result = await response.json()
 
   return {
     status: response.status,
-    message: 'Successfully retrieved jobs',
-    data: await getData<User>(response),
+    message: result.message,
+    data: result.data as User,
   }
 }

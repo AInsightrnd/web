@@ -98,7 +98,7 @@ export function Hero() {
   return (
     <>
       
-      {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>}
+      {/* {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>} */}
 
       <Container className="flex-grow w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
         <video
