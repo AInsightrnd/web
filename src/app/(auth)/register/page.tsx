@@ -1,15 +1,64 @@
-import Link from 'next/link'
-
+'use client'
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
-import { type Metadata } from 'next'
+// import { type Metadata } from 'next'
+import { ChangeEvent, HTMLInputTypeAttribute, useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: 'Sign Up',
+import { createUser } from '../../apis/users'
+
+export type EditFormItemType = {
+  label: string
+  key: string
+  value: string | number | readonly string[] | boolean | undefined
+  type: HTMLInputTypeAttribute
 }
 
+// export const metadata: Metadata = {
+//   title: 'Sign Up',
+// }
+
 export default function Register() {
+  const [editedItems, setEditedItems] = useState<EditFormItemType[]>([
+    {key: 'email', label: '이메일 *', type: 'email', value: ''},
+    {key: 'password', label: '비밀번호 *', type: 'password', value: ''},
+    {key: 'lastname', label: '성 *', type: 'text', value: ''},
+    {key: 'firstname', label: '이름 *', type: 'text', value: ''},
+  ])
+
+  const router = useRouter()
+
+  function handleTextInputChange (event: ChangeEvent<HTMLInputElement>) {
+    event.preventDefault()
+    const { name, value } = event.target
+    const changedItems = editedItems.reduce((a: EditFormItemType[], c: EditFormItemType) => {
+      if (c.key === name) {
+        return [...a, {...c, value: value}]
+      }
+      return [...a, c]
+    },[])
+    setEditedItems(changedItems)
+  }
+
+  const handleSignup = async () => {
+    const objPayload = editedItems.reduce((payload: any, item: EditFormItemType) => {
+      payload[item.key] = item.value
+      return payload
+    }, {})
+    console.log('signup: ', objPayload)
+    const response = await createUser(objPayload)
+
+    if (response.status === 201) {
+      console.log('User created successfully')
+      router.push(`/login`)
+    } else {
+      console.log('User creation failed')
+    }
+    
+  }
+
   return (
     <AuthLayout
       title="Sign up for an account"
@@ -26,20 +75,22 @@ export default function Register() {
       <form>
         <div className="grid grid-cols-2 gap-x-2 gap-y-4">
           <TextField
-            name="last_name"
+            name="lastname"
             label="성 *"
             type="text"
-            autoComplete="family-name"
+            autoComplete="lastname"
             placeholder="성"
             required
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
-            name="first_name"
+            name="firstname"
             type="text"
             label="이름 *"
-            autoComplete="given-name"
+            autoComplete="firstname"
             placeholder="이름"
             required
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
             className="col-span-full"
@@ -49,15 +100,17 @@ export default function Register() {
             autoComplete="email"
             placeholder="이메일 주소 입력"
             required
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
             className="col-span-full"
             label="비밀번호 *"
             name="password"
             type="password"
-            autoComplete="new-password"
+            autoComplete="password"
             placeholder="비밀번호 입력"
             required
+            onChange={(e) => handleTextInputChange(e)}
           />
           <SelectField
             className="col-span-full"
@@ -70,8 +123,13 @@ export default function Register() {
             <option>기타</option>
           </SelectField>
         </div>
-        <Button type="submit" color="cyan" className="mt-10 w-full">
-        가입하기
+        <Button
+          type="submit"
+          color="cyan"
+          className="mt-10 w-full"
+          onClick={() => handleSignup()}
+        >
+          가입하기
         </Button>
       </form>
     </AuthLayout>
