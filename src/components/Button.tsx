@@ -6,7 +6,9 @@ const baseStyles = {
     'inline-flex justify-center rounded py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors',
   outline:
     'inline-flex justify-center rounded border py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm outline-2 outline-offset-2 transition-colors',
-}
+  dls:
+  'inline-flex justify-start rounded p-4 text-base outline-4 outline-offset-2 transition-colors ',
+  }
 
 const variantStyles = {
   solid: {
@@ -18,6 +20,10 @@ const variantStyles = {
   outline: {
     cyan: 'border-ainblue-600 text-ainblue-600 hover:border-ainblue-200 active:bg-ainblue-200 active:text-ainblue-700/80',
     gray: 'border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80',
+  },
+  dls: {
+    cyan: 'border-ainblue-600 text-ainblue-600 hover:border-ainblue-200 active:bg-ainblue-200 active:text-ainblue-700/80',
+    gray: 'justify-self-stretch grid cols-1  bg-gray-800 text-lg font-medium text-gray-100 leading-snug hover:bg-ainblue-600 hover:text-gray-600 active:bg-gray-100 active:text-gray-700/80',
   },
 }
 
@@ -47,7 +53,7 @@ export function Button<
 
   className = clsx(
     baseStyles[variant],
-    variantStyles[variant][color] as ClassValue,
+    variantStyles[variant] [color] as ClassValue,
     className,
   )
 

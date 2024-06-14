@@ -36,7 +36,6 @@ export function Paper2() {
                                 </p>
     
     
-    
                 <a href="https://drive.google.com/file/d/1qYhfbO5V9Nc5XbVg5M8jd33bmdaYqS29/view?usp=sharing"  
                 target='_blank' className="text-ainblue-600 lg:mx-0 underline py-2">
                 다운로드</a>
