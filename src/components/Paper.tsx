@@ -6,7 +6,7 @@
 import { useEffect, useState } from 'react'
 import { useId } from 'react'
 import Image from 'next/image'
-
+import { Button } from '@/components/Button'
 
 // const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
 
@@ -38,7 +38,7 @@ export function Paper() {
         <div className="sm:col-span-full lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 overscroll-y-contain overflow-auto max-h-[calc(theme('dvh.1')*0.6]">
             <div class="flex justify-center max-w-4xl gap-y-2 flex grid cols-1 justify-items-start rounded-lg bg-gray-800">       
          
-                 <Button 
+                 <Button
                      variant="dls"
                      color= "gray" 
                      href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"
