@@ -21,7 +21,7 @@ export function Services() {
   return (
     <article
       id="services"
-      className="mx-4 grid max-w-mx grid-cols-1 items-start gap-x-8 gap-y-10 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-4 lg:max-w-full"
+      className=" select-none grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 px-4 py-24 sm:px-6 sm:py-32  lg:grid-cols-4 lg:max-w-7xl"
       >
 
 
@@ -35,11 +35,11 @@ export function Services() {
           </p>
         </div>
 
-        <div className="sm:col-span-full  lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 flex justify-center 
+        <div className="sm:col-span-full  lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 
         rounded-lg bg-gray-800 max-w-4xl max-h-fit p-4">
-        <div className="mt-1 text-sm leading-6 sm:col-span-2 sm:mt-0 aspect-video">
+        <div className="flex justify-center text-sm leading-6 sm:col-span-2 sm:mt-0 aspect-video">
           <Image
-            className="w-auto h-auto object-cover "
+            className="min-w-max h-auto object-cover"
             src={service}
             alt={""}
           />
