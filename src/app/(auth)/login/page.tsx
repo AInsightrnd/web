@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { TextField } from '../../../components/Fields';
 import { Button } from '../../../components/Button';
 import { useRouter } from 'next/navigation';
-import { UserContext } from '../../../reducers/userContext';
-import { Alerts } from '../../../components/Alerts';
+import { GlobalContext } from '../../../context/globalContext';
+import { ActionType } from '../../../types/DispatchActions';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -15,19 +15,36 @@ export default function Login() {
   const [showAlert, setShowAlert] = useState(false);
 
   const router = useRouter()
-  const { setUser } = useContext(UserContext);
+  const { state, dispatch } = useContext(GlobalContext)
   
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://0dmjqc0xyd.execute-api.ap-northeast-2.amazonaws.com/dev/signin', { email, password });
-      console.log('>>> login response: ', response.data)
-      // Handle successful login
-      const cookies = response.headers['Set-Cookie'];
-      if (!cookies) {
-        // Handle login error
-        return;
-      }
+      const response = await fetch('https://0dmjqc0xyd.execute-api.ap-northeast-2.amazonaws.com/dev/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+        // credentials: 'include',
+      });
+      const data = await response.json();
+      console.log('>>> login response body: ', data)
+      console.log('>>> login response headers: ', response.headers)
+      // const response = await axios.post('https://0dmjqc0xyd.execute-api.ap-northeast-2.amazonaws.com/dev/signin',
+      //   { email, password },
+      //   { withCredentials: true}
+      // );
+      // console.log('>>> login response: ', response.data)
+      // // Handle successful login
+      // console.log('>>> response.headers: ', response.headers)
+      // const cookies = response.headers['Set-Cookie'];
+      // if (!cookies) {
+      //   // Handle login error
+      //   return;
+      // }
+
+      const cookies = response.headers.get('Set-Cookie')
 
       const entities = cookies
         ? Object.fromEntries(cookies
@@ -37,7 +54,9 @@ export default function Login() {
 
       const token = entities['jwt']
       localStorage.setItem('jwt', token);
-      setUser(response.data);
+
+      // dispatch({ type: ActionType.SET_USER, payload: response.data });
+      dispatch({ type: ActionType.SET_USER, payload: data});
 
       router.push(`/`)
       // axios.defaults.headers.common['Authorization'] = `Bearer ${jwt}`;

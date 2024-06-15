@@ -1,16 +1,14 @@
 'use client'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { UserContext } from '../reducers/userContext'
 import { useContext } from 'react'
+import { GlobalContext } from '../context/globalContext'
 
 export function ProviderWrapper({ children }: { children: React.ReactNode }) {
-  const { user, setUser } = useContext(UserContext)
+  const { state, dispatch } = useContext(GlobalContext)
   return (
     <>
-      <UserContext.Provider value={{ user, setUser }}>
+      <GlobalContext.Provider value={{ state, dispatch }}>
         {children}
-      </UserContext.Provider>
+      </GlobalContext.Provider>
     </>
   )
 }
