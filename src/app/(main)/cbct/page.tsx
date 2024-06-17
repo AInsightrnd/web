@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player'
 import { useEffect, useState } from 'react'
 
 
-export default function cbct() {
+export default function Cbct() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true)

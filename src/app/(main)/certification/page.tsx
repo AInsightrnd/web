@@ -10,7 +10,7 @@ import certificate from '../../../images/paper/certificate.jpg'
 import { Container } from '../../../components/Container'
 
 
-export default function history() {
+export default function History() {
   const [isClient, setIsClient] = useState(false)
  
   useEffect(() => {

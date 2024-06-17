@@ -1,16 +1,14 @@
 'use client'
 
-import { useId } from 'react'
 import { useState, useEffect } from 'react'
 
-export default function about() {
+export default function About() {
   const [isClient, setIsClient] = useState(false)
  
   useEffect(() => {
     setIsClient(true)
   }, [])
  
-
   return (
     <section
     id="about"
