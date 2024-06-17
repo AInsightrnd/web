@@ -8,7 +8,7 @@ import { Button } from '../../../components/Button';
 import { useRouter } from 'next/navigation';
 import { ActionType } from '../../../types/DispatchActions';
 import { User } from '../../../types/User';
-import { GlobalContext } from '@/context/GlobalContext';
+import { GlobalContext } from '@/contexts/GlobalContext';
 
 export default function Login() {
   const [email, setEmail] = useState('');
