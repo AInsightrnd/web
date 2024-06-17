@@ -1,12 +1,18 @@
 'use client'
 
 import { useId } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import historys from '../../../images/company/history.png'
 
 export default function history() {
+  const [isClient, setIsClient] = useState(false)
  
-
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+ 
+ 
   return (
     <section
     id="history"
@@ -16,7 +22,7 @@ export default function history() {
 
 <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-40 lg:gap-x-4">
           <h1 className="text-3xl font-bold tracking-tight text-gray-50">
-          연혁
+          회사 연혁
           </h1>
         </div>
 

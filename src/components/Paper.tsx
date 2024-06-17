@@ -6,7 +6,6 @@
 import { useEffect, useState } from 'react'
 import { useId } from 'react'
 import Image from 'next/image'
-import paper1 from '../images/paper/paper01.png'
 import { Button } from '@/components/Button'
 
 // const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
@@ -28,7 +27,7 @@ export function Paper() {
         className="  grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 py-24 sm:px-6 sm:py-32 sm:mx-auto 
         lg:max-w-7xl lg:px-8 lg:grid-cols-4 lg:mx-0 "
       >
-      <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4 items-start">
+      <div className="select-none grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4 items-start">
               <h1 className="text-3xl font-bold tracking-tight text-gray-50">
               논문
               </h1>
@@ -37,9 +36,9 @@ export function Paper() {
     
   
         <div className="sm:col-span-full lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 overscroll-y-contain overflow-auto max-h-[calc(theme('dvh.1')*0.6]">
-            <div class="flex justify-center max-w-4xl gap-y-2 flex grid cols-1 justify-items-start rounded-lg bg-gray-800">       
+            <div className="flex justify-center max-w-4xl gap-y-2 flex grid cols-1 justify-items-start rounded-lg bg-gray-800">       
          
-                 <Button 
+                 <Button
                      variant="dls"
                      color= "gray" 
                      href="https://drive.google.com/file/d/15rY7fvbR66waFg9acxJvroFkX3KsOeD1/view?usp=sharing"
@@ -54,7 +53,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-center max-w-4xl gap-y-2 flex grid cols-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-center max-w-4xl gap-y-2 flex grid cols-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -69,7 +68,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -84,7 +83,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -100,7 +99,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -116,7 +115,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-items-start max-w-4xl gap-y-2 flex grid col-span-1  rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-items-start max-w-4xl gap-y-2 flex grid col-span-1  rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -132,7 +131,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-items-start max-w-4xl gap-y-2 flex grid col-span-1  rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-items-start max-w-4xl gap-y-2 flex grid col-span-1  rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
@@ -148,7 +147,7 @@ export function Paper() {
                   </Button>
                 </div>
 
-                <div class="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
+                <div className="flex justify-center max-w-4xl gap-y-2 flex grid col-span-1 justify-items-start rounded-lg bg-gray-800 mt-5">       
                  <Button 
                      variant="dls"
                      color= "gray" 
