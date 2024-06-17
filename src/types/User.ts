@@ -3,4 +3,6 @@ export type User = {
   email: string
   firstname: string
   lastname: string
+  signedin: boolean
+  token: string
 }

@@ -8,6 +8,9 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
+import { useContext, useEffect, useState } from 'react'
+import { GlobalContext } from '../context/GlobalContext'
+import axios from 'axios'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -51,6 +54,38 @@ function MobileNavLink(
 }
 
 export function Header() {
+  const { state, dispatch } = useContext(GlobalContext)
+  const [name, setName] = useState('')
+
+  useEffect(() => {
+    console.log('-> user: ', state.user)
+    if (state.user.signedin) {
+      setName(`${state.user.lastname} ${state.user.firstname} 님`)
+    }
+  }, [state])
+
+  const handleUserDetail = async () => {
+    try {
+      const endpoint = 'https://0dmjqc0xyd.execute-api.ap-northeast-2.amazonaws.com/dev/users/' + state.user.email
+      console.log('>>>>> token3: ', state.user.token)
+      const response = await axios.get(
+        endpoint,
+        {
+          headers: {
+            // 'Authorization': state.user.token,
+            'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjYyNjI1YTRmMzY1ZGY3OTgyMTBlMCIsImVtYWlsIjoiaHl1bmdreXVAdGVzdC5jb20iLCJmaXJzdG5hbWUiOiJLeXUiLCJsYXN0bmFtZSI6IkxlZSIsImlhdCI6MTcxODY0NTM5OSwiZXhwIjoxNzE4NjQ4OTk5fQ.ELHADdJYZ3Y6N30MiVQjAeO0HNczr9Lp474G47bncEk',
+          },
+          // withCredentials: true 
+        }
+      );
+      console.log('>>> login response: ', response.data)
+
+    } catch (error) {
+      // Handle login error
+      console.error('exception: ', (error as Error).message)
+    }
+  }
+
   return (
     <header>
       <nav>
@@ -137,8 +172,11 @@ export function Header() {
                             </MobileNavLink> */}
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
+                            <Link href="#" className='text-ainblue-600 font-semibold'>
+                              {name}
+                            </Link>
                             <Button href="/login" variant="outline" color='cyan'>
-                              로그인
+                              {state.user.signedin ? '로그아웃' : '로그인'}
                             </Button>
                           </div>
                         </Popover.Panel>
@@ -152,8 +190,11 @@ export function Header() {
             {/* <Button href="#" variant="outline" className="hidden lg:block">
               Log in
             </Button> */}
+            <Button href="#" className='text-ainblue-600 font-semibold' onClick={handleUserDetail}>
+              {name}
+            </Button>
             <Button href="/login" variant="outline" color='cyan' className="hidden lg:block">
-              로그인
+              {state.user.signedin ? '로그아웃' : '로그인'}
             </Button>
           </div>
         </Container>

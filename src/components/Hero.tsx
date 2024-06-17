@@ -1,15 +1,8 @@
 'use client'
 
-import { useContext, useEffect, useId, useState } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
-
-
+import { useId, useState } from 'react'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Alerts } from './Alerts'
-import { GlobalContext } from '../context/globalContext'
-
 
 function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
   let id = useId()
@@ -95,12 +88,6 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Hero() {
   const [showAlert, setShowAlert] = useState(false)
-  const { state, dispatch } = useContext(GlobalContext)
-
-  useEffect(() => {
-    console.log('>>> state: ', state) 
-  }, [state])
-
   return (
     <>
       
@@ -135,8 +122,6 @@ export function Hero() {
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
               <span className="ml-0">Web AICiTi</span>
             </Button>
-
-
           </div>
         </div>
        

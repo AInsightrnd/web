@@ -1,13 +1,15 @@
-import { createContext } from "react";
-import { Context } from "../types/Context";
-import { SetUser } from "../types/DispatchActions";
+import { createContext } from 'react';
+import { Context } from '../types/Context';
+import { SetUser } from '../types/DispatchActions';
 
 export const initialContext: Context = {
   user: {
     id: "",
     email: "",
     firstname: "",
-    lastname: ""
+    lastname: "",
+    signedin: false,
+    token: "",
   },
 }
 
