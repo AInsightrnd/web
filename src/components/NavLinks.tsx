@@ -53,7 +53,7 @@ export function NavLinks({dark}: {dark?: boolean}) {
       label: 'Contact',
       dropdownItems: [
         { label: 'Contact Us', href: '/contact' },
-        { label: 'FAQ', disable: true },
+        { label: 'FAQs', href: '/faqs' },
       ],
     },
   ];
