@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx('h-full bg-gray-50 antialiased', inter.variable)}
+      className={clsx('h-full bg-gray-50 antialiased scrollbar-hide', inter.variable)}
     >
       <body className="flex h-full flex-col">
         <ProviderWrapper>

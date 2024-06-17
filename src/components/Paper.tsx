@@ -27,7 +27,7 @@ export function Paper() {
         className="  grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 py-24 sm:px-6 sm:py-32 sm:mx-auto 
         lg:max-w-7xl lg:px-8 lg:grid-cols-4 lg:mx-0 "
       >
-      <div className="grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4 items-start">
+      <div className="select-none grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4 items-start">
               <h1 className="text-3xl font-bold tracking-tight text-gray-50">
               논문
               </h1>
@@ -45,7 +45,7 @@ export function Paper() {
                      target='_blank' 
                      >
                      <span className="ml-0">
-                        Automated Analysis of Three-dimensional CBCT Images Taken in Natural Head Position That Combines Facial Pro
+                        Automated Analysis of Three-dimensional CBCT Images Taken in Natural Head Position That Combines Facial Profile Processing and Multiple Deep-learning Models
                      </span>
                      <p className="mt-2 px-2 text-sm text-gray-400 leading-snug "> 
                      2021, 8, PREPRINT (Version 1) available at Research Square

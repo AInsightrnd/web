@@ -1,9 +1,14 @@
 'use client'
 
 import { useId } from 'react'
-
+import { useState, useEffect } from 'react'
 
 export default function about() {
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
  
 
   return (
