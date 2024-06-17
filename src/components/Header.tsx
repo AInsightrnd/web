@@ -9,7 +9,7 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
 import { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../context/GlobalContext'
+import { GlobalContext } from '@/context/GlobalContext'
 import axios from 'axios'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
