@@ -10,7 +10,7 @@ import { Container } from '../../../components/Container'
 
 // const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
 
-export default function contactus() {
+export default function Contactus() {
   const [isClient, setIsClient] = useState(false)
  
   useEffect(() => {

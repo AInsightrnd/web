@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import historys from '../../../images/company/history.png'
 
-export default function history() {
+export default function History() {
   const [isClient, setIsClient] = useState(false)
  
   useEffect(() => {
