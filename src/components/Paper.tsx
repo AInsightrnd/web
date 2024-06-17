@@ -45,7 +45,7 @@ export function Paper() {
                      target='_blank' 
                      >
                      <span className="ml-0">
-                        Automated Analysis of Three-dimensional CBCT Images Taken in Natural Head Position That Combines Facial Pro
+                        Automated Analysis of Three-dimensional CBCT Images Taken in Natural Head Position That Combines Facial Profile Processing and Multiple Deep-learning Models
                      </span>
                      <p className="mt-2 px-2 text-sm text-gray-400 leading-snug "> 
                      2021, 8, PREPRINT (Version 1) available at Research Square
