@@ -83,11 +83,8 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      width: {
-        'big': '48rem',
-      }
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 }
 export default config
