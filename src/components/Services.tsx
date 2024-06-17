@@ -21,7 +21,7 @@ export function Services() {
   return (
     <article
       id="services"
-      className=" select-none max-w-2xl grid grid-cols-1 flex items-start gap-x-8 gap-y-10 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-4 lg:max-w-7xl lg:px-8 lg:mx-0  "
+      className=" select-none  grid grid-cols-1 flex items-start gap-x-8 gap-y-10 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-4 lg:max-w-7xl lg:px-8 lg:mx-0  "
       >
 
 
@@ -29,7 +29,7 @@ export function Services() {
           <h1 className="text-3xl font-bold tracking-tight text-gray-50">
           AICiTi
           </h1>
-          <p className="text-gray-200 break-keep lg:max-w-72">
+          <p className="text-gray-200 break-keep max-w-2xl lg:max-w-72">
             AICiTi 아이씨티 프로그램은 치과용 CBCT(Cone Beam Computed Tomography) 영상에서 딥러닝 모델을 이용해 
 치아 교정 진단에 필요한 랜드마크를 자동 검출, 분석을 제공합니다.
           </p>

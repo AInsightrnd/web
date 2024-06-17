@@ -55,7 +55,7 @@ export function Header() {
     <header>
       <nav>
         <Container className="z-50 fixed w-full flex justify-between py-8 bg-ainbg-primary">
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="relative z-10 flex items-center gap-16 lg:gap-20">
             <Link href="/" aria-label="Home">
               <Logo className="h-6 w-auto" />
             </Link>
@@ -64,7 +64,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <Popover className="lg:hidden">
+            <Popover className="lg:hidden ">
               {({ open }) => (
                 <>
                   <Popover.Button
