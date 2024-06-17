@@ -6,9 +6,9 @@ import Link from 'next/link';
 import { TextField } from '../../../components/Fields';
 import { Button } from '../../../components/Button';
 import { useRouter } from 'next/navigation';
-import { GlobalContext } from '../../../context/GlobalContext';
 import { ActionType } from '../../../types/DispatchActions';
 import { User } from '../../../types/User';
+import { GlobalContext } from '../../../context/GlobalContext';
 
 export default function Login() {
   const [email, setEmail] = useState('');
