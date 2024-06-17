@@ -9,9 +9,14 @@ import Image from 'next/image'
 import certificate from '../../../images/paper/certificate.jpg'
 import { Container } from '../../../components/Container'
 
-// const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
 
 export default function history() {
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+ 
 
   return (
     <>

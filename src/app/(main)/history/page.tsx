@@ -1,12 +1,18 @@
 'use client'
 
 import { useId } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import historys from '../../../images/company/history.png'
 
 export default function history() {
+  const [isClient, setIsClient] = useState(false)
  
-
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+ 
+ 
   return (
     <section
     id="history"
