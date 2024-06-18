@@ -59,7 +59,7 @@ export function Faqs() {
               <ul role="list" className="flex justify-center max-w-4xl flex grid cols-1 gap-y-4">
                 {column.map((faq, faqIndex) => (
                   <li key={faqIndex}
-                  classname="gap-y-2  justify-items-start rounded-lg bg-gray-800">
+                  className="gap-y-2  justify-items-start rounded-lg bg-gray-800">
                     <h3 className="text-lg font-semibold leading-6 text-gray-200 ">
                       {faq.question}
                     </h3>
