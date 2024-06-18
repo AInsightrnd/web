@@ -36,9 +36,9 @@ export function Faqs() {
             id="faqs-title"
             className="text-3xl font-bold tracking-tight text-gray-50"
           >
-            질문과 답변
+            자주 묻는 질문
           </h2>
-          <p className="mt-2 text-lg text-gray-300">
+          <p className="mt-2 text-gray-200 break-keep">
             If you have anything else you want to ask,{' '}
             <a
               href="mailto:info@example.com"
@@ -60,10 +60,11 @@ export function Faqs() {
                 {column.map((faq, faqIndex) => (
                   <details key={faqIndex}
                   className="gap-y-2  rounded-lg p-4 bg-gray-800 w-full ">
-                    <summary className=" text-lg font-semibold leading-6 text-gray-200 ">
+                    <summary className=" text-lg font-semibold leading-6 text-gray-100 ">
                       {faq.question}
                     </summary>
-                    <p className="mt-4 text-sm text-gray-400 ">{faq.answer}</p>
+                    <div className="border-t border-gray-500 mt-4"></div>
+                    <p className="mt-4 text-sm text-gray-300 ">{faq.answer}</p>
                   </details>
                 ))}
               </ul>
