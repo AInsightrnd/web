@@ -52,19 +52,19 @@ export function Faqs() {
         <ul
           role="list"
           className="sm:col-span-full lg:col-span-3 gap-4 sm:gap-6 lg:gap-8 overscroll-y-contain 
-          overflow-auto max-h-[calc(theme('dvh.1')*0.6] ">
+          overflow-auto max-h-[calc(theme('dvh.1')*0.6] flex items-start ">
         
           {faqs.map((column, columnIndex) => (
 
-              <ul role="list" className="flex justify-center max-w-4xl flex grid cols-1 gap-y-4">
+              <ul role="list" className="flex justify-items-start  grid cols-1 gap-y-6 w-full">
                 {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}
-                  className="gap-y-2  justify-items-start rounded-lg bg-gray-800">
-                    <h3 className="text-lg font-semibold leading-6 text-gray-200 ">
+                  <details key={faqIndex}
+                  className="gap-y-2  rounded-lg p-4 bg-gray-800 w-full ">
+                    <summary className=" text-lg font-semibold leading-6 text-gray-200 ">
                       {faq.question}
-                    </h3>
+                    </summary>
                     <p className="mt-4 text-sm text-gray-400 ">{faq.answer}</p>
-                  </li>
+                  </details>
                 ))}
               </ul>
 
