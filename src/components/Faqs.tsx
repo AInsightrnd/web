@@ -5,20 +5,21 @@ const faqs = [
  
   [
     {
-      question: 'The standard Lorem Ipsum passag?',
+      question: '프로그램 사용을 위해서 꼭 CBCT가 필요합니까?',
       answer:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        '프로그램을 통한 분석을 얻기 위해서는 반드시 Nasion부터 Menton까지 촬영되는 CBCT 장비가 필요합니다.',
     },
     {
-      question: 'The standard Lorem Ipsum passag?',
+      question: 'NHP란  무엇입니까?',
       answer:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        '환자가 편안히 서서, 정면에 있는 거울 속 자신의 눈을 바라보는 상태를 말합니다. \n“ortho Position“이라고 불리며, 재현성과 신뢰도가 높습니다.',
     },
     {
-      question: 'The standard Lorem Ipsum passag?',
+      question: '기존 타 프로그램 분석법과 차이점은 무엇입니까?',
       answer:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        '기존 분석법(프로그램)은 2D cephalo 분석으로, 많은 수의  두개 내 기준선을 사용합니다. \n AICiTi program은 CBCT를 이용한 3D 골격 분석법으로, 두개 외 기준선인 NTVP, THP를 이용한다.'
     },
+
   ],
  
 ]
@@ -29,7 +30,7 @@ export function Faqs() {
       id="faqs"
       aria-labelledby="faqs-title"
       className="grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 py-24 sm:px-6 sm:py-32 sm:mx-auto 
-        lg:max-w-7xl lg:px-8 lg:grid-cols-4 lg:mx-0"
+        lg:max-w-7xl lg:px-8 lg:grid-cols-4 lg:mx-0 "
     >
       <div className="select-none grid lg:grid-cols-1 gap-y-2 sm:grid-cols-1 sm:gap-y-46 lg:gap-x-4 items-start">
           <h2
@@ -57,14 +58,17 @@ export function Faqs() {
           {faqs.map((column, columnIndex) => (
 
               <ul role="list" className="flex justify-items-start  grid cols-1 gap-y-6 w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+                aria-hidden="true" className='h-1 w-1'></svg>
+
                 {column.map((faq, faqIndex) => (
                   <details key={faqIndex}
                   className="gap-y-2  rounded-lg p-4 bg-gray-800 w-full ">
-                    <summary className=" text-lg font-semibold leading-6 text-gray-100 ">
+                    <summary className=" text-lg font-semibold leading-6 text-gray-50 list-none ">
                       {faq.question}
                     </summary>
                     <div className="border-t border-gray-500 mt-4"></div>
-                    <p className="mt-4 text-sm text-gray-300 ">{faq.answer}</p>
+                    <p className="mt-4 text-md text-gray-100 whitespace-pre">{faq.answer}</p>
                   </details>
                 ))}
               </ul>
