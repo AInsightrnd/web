@@ -93,35 +93,35 @@ export function Hero() {
       
       {/* {showAlert && <Alerts type='ok' title='알림' descriptions={['준비중입니다.']} action={setShowAlert}/>} */}
 
-      <Container className="flex-grow w-full h-screen overflow-hidden bg-ainbg-primary mx-auto">
+      <Container className="flex-grow w-full h-4/5 overflow-hidden bg-ainbg-primary mx-auto">
         <video
           loop
           autoPlay
           muted
           id="bg-video"
-          className="md:flex min-w-full h-auto object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="md:flex min-w-full  h-auto object-cover absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
           <source
             src='/main-bg-8sec.mp4'
             type="video/mp4"
             />
         </video>
-        <div className="absolute top-0 mt-[50%] md:top-1/2 md:mt-0 transform -translate-y-1/2 text-white">
-          <h1 className="text-3xl font-semibold tracking-tight text-gray-50">
+        <div className="absolute top-0 mt-[40%] md:top-[45%] md:mt-0 transform -translate-y-1/2 text-white">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-50">
             NHP CBCT AI Diagnosis
           </h1>
           {/* <p className="text-lg md:text-xl lg:text-2xl">Your centered text message goes here.</p> */}
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
             {/* <AppStoreLink /> */}
-            <Button
+            {/* <Button
               // href="/#services"
               variant="solid"
               color='cyan'
               onClick={() => setShowAlert(true)}
-            >
+            >*/}
               {/* <PlayIcon className="h-6 w-6 flex-none" /> */}
-              <span className="ml-0">Web AICiTi</span>
-            </Button>
+             {/* <span className="ml-0">Web AICiTi</span>*/}
+            {/* </Button>*/}
           </div>
         </div>
        
