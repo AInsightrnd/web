@@ -66,7 +66,7 @@ export function Faqs() {
           <p className="mt-2 text-gray-200 break-keep">
             If you have anything else you want to ask,{' '}
             <a
-              href="mailto:info@example.com"
+              href="#"
               className="text-gray-300 underline"
             >
               reach out to us
@@ -85,7 +85,7 @@ export function Faqs() {
                 {column.map((faq, faqIndex) => (
                   <details key={faqIndex}
                   className="w-full rounded-md mb-6 p-4 bg-gray-800 hover:bg-gray-700 cursor-pointer">
-                    <summary className=" text-lg font-semibold leading-6 text-gray-50 list-none ">
+                    <summary className=" text-lg font-semibold leading-6 text-gray-50 ">
                       {faq.question}
                     </summary>
                     <div className="border-t border-gray-500 mt-4"></div>
